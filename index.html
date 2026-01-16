@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <title>PXL Hogeschool - IT Essentials Course</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/style.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    div.mermaid:not([data-processed="true"]) {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    div.mermaid[data-processed="true"] {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.2s ease-in-out;
+    }
+  </style>
+
+  <style>
+    .video-card {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin: 16px 0;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .video-card img {
+      width: 200px;
+      border-radius: 6px;
+    }
+
+    .video-card .content {
+      flex: 1;
+    }
+
+    .video-card .title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      name: 'PXL Research Project',
+      homepage: 'README.md',
+      logo: 'https://pxl-research-project.github.io/rp-docs/assets/img/banner-sidebar.png',
+
+      loadSidebar: '_sidebar.md',
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+
+      auto2top: true,
+      autoHeader: false,
+      maxLevel: 3,
+      mergeNavbar: true,
+      subMaxLevel: 2,
+      sidebarDisplayLevel: 0,
+
+      plantuml: {
+        skin: 'default',
+        serverPath: 'https://www.plantuml.com/plantuml/svg/',
+      },
+
+      mermaidConfig: {
+        querySelector: ".mermaid"
+      },
+
+      search: {
+        depth: 3,
+        noData: 'No results!',
+        placeholder: 'Search...'
+      },
+
+      katex: {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false }
+        ]
+      },
+
+      darklightTheme: {
+        siteFont: "PT Sans",
+        defaultTheme: 'dark',
+        codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+        bodyFontSize: '17px',
+        dark: {
+          accent: '#42b983',
+          toogleBtnBg: '#34495e',
+          background: '#091a28',
+          textColor: '#b4b4b4',
+          codeTextColor: '#ffffff',
+          codeBackgroudColor: '#0e2233',
+          borderColor: '#0d2538',
+          blockQuoteColor: '#858585',
+          highlightColor: '#d22778',
+          sidebarSublink: '#b4b4b4'
+        },
+        light: {
+          accent: '#42b983',
+          toogleBtnBg: '#ffffff',
+          background: '#ffffff',
+          textColor: '#34495e',
+          codeTextColor: '#525252',
+          codeBackgroudColor: '#f8f8f8',
+          borderColor: 'rgba(0, 0, 0, 0.07)',
+          blockQuoteColor: '#858585',
+          highlightColor: '#d22778',
+          sidebarSublink: '#505d6b'
+        }
+      }
+    };
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="assets/js/vendor/docsify-zoom-image.min.js"></script>
+  <script src="assets/js/vendor/docsify-image-size.js"></script>
+
+  <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/index.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@1/dist/docsify-katex.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/d3@7"></script>
+
+  <!-- REQUIRED: load Mermaid engine BEFORE custom plugin -->
+  <script src="assets/js/vendor/mermaid.min.js"></script>
+
+  <!-- CUSTOM MERMAID PLUGIN -->
+  <script src="assets/js/vendor/docsify-mermaid.js"></script>
+
+  <script src="//unpkg.com/docsify-mermaid-zoom/dist/docsify-mermaid-zoom.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-hcl.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
+  <script src="assets/js/vendor/prism-git.min.js"></script>
+  <script src="assets/js/vendor/prism-nginx.min.js"></script>
+  <script src="assets/js/vendor/prism-ini.min.js"></script>
+  <script src="assets/js/vendor/prism-basic.min.js"></script>
+  <script src="assets/js/vendor/prism-rust.min.js"></script>
+  <script src="assets/js/vendor/prism-c.min.js"></script>
+  <script src="assets/js/vendor/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+
+  <script>
+    (function () {
+
+      function transformYouTubeCards(html) {
+
+        return html.replace(
+          /(https?:\/\/(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]+))<\/p>\s*<p>([^<]+)<\/p>/g,
+          function (match, url, id, desc) {
+
+            const thumb = "https://img.youtube.com/vi/" + id + "/hqdefault.jpg";
+
+            return `
+<div class="video-card">
+  <a href="${url}" target="_blank">
+    <img src="${thumb}">
+  </a>
+  <div class="content">
+    <div class="title">
+      <a href="${url}" target="_blank">${url}</a>
+    </div>
+    <div class="desc">${desc}</div>
+  </div>
+</div>
+`;
+          }
+        );
+      }
+
+      window.$docsify = window.$docsify || {};
+      window.$docsify.plugins = (window.$docsify.plugins || []).concat(function (hook, vm) {
+        hook.afterEach(function (html, next) {
+          next(transformYouTubeCards(html));
+        });
+      });
+
+    })();
+  </script>
+
+
+</body>
+
+</html>
