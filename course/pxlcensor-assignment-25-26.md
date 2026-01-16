@@ -1,59 +1,53 @@
 # Operation UrbanShield: Smart City Privacy
 
-## The Client
+*UrbanEye AI*, een computer vision startup, is onlangs overgenomen door de stad Berlijn. De stad rolt duizenden high-resolution camera's uit om de traffic flow en emergency response te optimaliseren onder het "Smart City" initiatief.
 
-UrbanEye AI, a computer vision startup, was recently acquired by the City of Berlin. The city is rolling out thousands of high-resolution cameras to optimize traffic flow and emergency response under the "Smart City" initiative.
+Berlijn werkt onder een "Privacy First" legal mandate. Het is strikt verboden voor de stad om identificeerbare gezichten, vastgelegd door public sensors, op te slaan of te bekijken. UrbanEye heeft **PXLCensor** ontwikkeld om dit op te lossen—een service die gezichten detecteert en pixelate.
 
-## The Backstory
-
-Berlin operates under a "Privacy First" legal mandate. It is strictly illegal for the city to store or view identifiable faces captured by public sensors. UrbanEye developed **PXLCensor** to solve this—a service that detects and pixelates faces.
-
-While the "lab prototype" works in Docker, the City IT Department has a **strict No-container policy** for production cloud instances to minimize the security attack surface. Your task is to take this containerized prototype and rebuild it into a hardened, high-scale cloud platform using automation.
+Hoewel het "lab prototype" werkt in Docker, hanteert de City IT Department een **strict No-container policy** voor production cloud instances om de security attack surface te minimaliseren. Jouw taak is om dit containerized prototype te transformeren naar een hardened, high-scale cloud platform met behulp van automation.
 
 ---
 
-## Your Mission
+## Mission
 
-As the Cloud Engineering Task Force, you must migrate PXLCensor to a resilient cloud environment that meets the City's standards for security, scalability, and monitoring.
+Als de Cloud Engineering Task Force moet je PXLCensor migreren naar een resilient cloud environment die voldoet aan de standaarden van de stad voor security, scalability en monitoring.
 
 ### Bare-Metal Infrastructure & Ansible
 
-Since Docker is banned on the production servers, you must automate the "bare metal" deployment.
+Aangezien Docker verboden is op de production servers, moet je de "bare metal" deployment automatiseren.
 
-* **AWS Setup:** Architect the network (VPC, Subnets, Security Groups) and high-availability components (Load Balancer, Auto Scaling Groups) via the AWS Console.
-* **Ansible Orchestration:** Write playbooks to provision cloud instances from scratch—installing Node.js, Python, and PostgreSQL, and managing services via `systemd`.
+* **AWS Setup:** Architect het netwerk (VPC, Subnets, Security Groups) en de high-availability components (Load Balancer, Auto Scaling Groups) via de AWS Console.
+* **Ansible Orchestration:** Schrijf playbooks om cloud instances vanaf nul te provisionen—installeer Node.js, Python en PostgreSQL, en beheer de services via `systemd`.
 
 ### Scaling
 
-To ensure the city's privacy mandate is met in real-time, the system must handle big fluctuations in traffic volume.
+Om te garanderen dat het privacy mandate van de stad in real-time wordt nageleefd, moet het systeem grote fluctuaties in traffic volume kunnen opvangen.
 
-* **Elastic Capacity:** You must configure autoscaling that react to actual workload. If the image processing queue grows beyond a specific threshold during rush hour, new cloud instances must be provisioned and configured automatically.
-
-* **Worker Optimization:** The Python-based face detection is CPU-intensive. You must determine the optimal instance type and scaling triggers (e.g., CPU utilization vs. custom metrics) to balance cost with the City's requirement for low-latency processing.
-
-* **Reliability:** Scaling is not just about growing; it is about staying healthy. You must implement Target Tracking and Health Checks to ensure that if a single node fails, a load balancer immediately routes traffic to healthy instances.
+* **Elastic Capacity:** Je moet autoscaling configureren die reageert op de actuele workload. Als de image processing queue tijdens rush hour boven een specifieke threshold uitkomt, moeten nieuwe cloud instances automatisch geprovisioned en geconfigureerd worden.
+* **Worker Optimization:** De Python-gebaseerde face detection is CPU-intensive. Je moet het optimale instance type en de juiste scaling triggers (bijv. CPU utilization vs. custom metrics) bepalen om kosten te balanceren met de eis van de stad voor low-latency processing.
+* **Reliability:** Scaling gaat niet alleen over groei; het gaat over gezond blijven. Je moet Target Tracking en Health Checks implementeren om te garanderen dat als een single node faalt, een load balancer het verkeer onmiddellijk naar healthy instances routeert.
 
 ### Departmental Portal & Identity
 
-The City requires a centralized **Login Portal** for different departments (Traffic Control, Police, Urban Planning).
+De stad vereist een gecentraliseerde **Login Portal** voor verschillende afdelingen (Traffic Control, Police, Urban Planning).
 
-* **Identity Federation:** The portal must allow officials to log in using their official **Microsoft emails**.
-* **Department Scoping:** Use the `AUTH_USER_HEADER` to ensure a Traffic Controller only sees traffic footage and cannot access data from other departments.
+* **Identity Federation:** De portal moet ambtenaren in staat stellen in te loggen met hun officiële **Microsoft emails**.
+* **Department Scoping:** Gebruik de `AUTH_USER_HEADER` om te garanderen dat een Traffic Controller alleen traffic footage ziet en geen toegang heeft tot data van andere afdelingen.
 
 ### Deep Observability & Performance
 
-The City needs to know exactly how the system behaves under pressure.
+De stad moet precies weten hoe het systeem zich gedraagt onder druk.
 
-* **Monitoring Stack:** Track and analyze key metrics.
-* **Load Testing:** You must prove the system can handle a "Rush Hour" spike. You are required to run load tests to trigger and validate your **auto scaling** policies.
+* **Monitoring Stack:** Track en analyseer key metrics (bijv. met Prometheus en Grafana).
+* **Load Testing:** Je moet bewijzen dat het systeem een "Rush Hour" spike aankan. Je bent verplicht om load tests uit te voeren om je **auto scaling** policies te triggeren en te valideren.
 
 ---
 
 ## Agile Team Roles
 
-You will operate as an Agile Squad in Sprints.
+Je werkt als een Agile Squad in Sprints.
 
-* **Product Owner (PO):** A high-ranking official from the Metropolis Department of Innovation. They care about **SLAs** (Service Level Agreements). They will ask: "Can we handle 5,000 images during rush hour?"
+* **Product Owner (PO):** Een hooggeplaatste functionaris van de Metropolis Department of Innovation. Zij focussen op **SLAs** (Service Level Agreements).
 
 ---
 
@@ -61,8 +55,8 @@ You will operate as an Agile Squad in Sprints.
 
 | Component | Requirement |
 | --- | --- |
-| **Cloud** | AWS (Manual Console setup for VPC, ELB, ASG) |
-| **Automation** | **Ansible** (Strictly no Docker on production EC2) |
-| **Identity** | SSO Portal with Microsoft OIDC/SAML integration |
+| **Cloud** | TBD |
+| **Automation** | **Ansible** (Strikt geen Docker op cloud instances) |
+| **Identity** | SSO Portal met Microsoft OIDC/SAML integration |
 | **Database** | Managed PostgreSQL (RDS) |
 | **Observability** | TBD |
