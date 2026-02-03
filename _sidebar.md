@@ -9,6 +9,4 @@
 
 * Planning
 	* [Artifacts](planning/artifacts.md)
-	* [Milestones](planning/milstones.md)
-	* [Phase 1](planning/phase1.md)
-	* [Phase 2](planning/phase2.md)
+	* [Backlog](planning/backlog.md)
