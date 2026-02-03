@@ -1,7 +1,8 @@
 <!-- docs/_sidebar.md -->
 
-* [Home](README.md)
-* [Opdracht](course/pxlcensor-assignment-25-26.md)
+* Research Project
+    * [Home](README.md)
+    * [Opdracht](course/pxlcensor-assignment-25-26.md)
 
 * Assessment
 	* [Sprint Review Template](assessment/sprint-review-template.md)
