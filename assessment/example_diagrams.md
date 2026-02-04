@@ -42,99 +42,226 @@ Rel(boutique, returns_portal, "Returns/RMA initiatie en status", "HTTPS")
 ## C4 - L2 Container Diagram
 
 ```mermaid
-C4Container
-title Container Diagram (C4 Level 2) - Online Boutique (interne softwarestructuur)
+flowchart TB
 
-Person(shopper, "Shopper", "Gebruikt web UI in browser.")
-Person(admin, "Admin/Support", "Operationeel beheer, klantendossiers, refunds (via interne UI/console).")
+%% =========================
+%% EDGE LAYER
+%% =========================
 
-System_Boundary(s1, "Online Boutique Web Application") {
+users[End Users\nBrowsers/Mobile]
+admins[Ops/Admins\nVPN/Bastion Access]
+internet((Internet))
 
-  Container(lb, "Reverse Proxy / Load Balancer", "Nginx / ALB", "TLS termination, routing, rate limiting, WAF rules (logisch).")
+dns_public["Route53 Public DNS\nonline-boutique.com"]
+waf["AWS WAF\nL7 Filtering"]
 
-  Container(frontend, "Frontend (Web UI + Edge API)", "Go HTTP server", "Serveert UI, beheert sessie-id, orchestreert user flows; roept backend services aan via gRPC.")  %% repo: frontend
+%% =========================
+%% REGION + VPC
+%% =========================
 
-  Container(checkout, "Checkout Service", "Go (gRPC)", "Orkestreert checkout: cart ophalen, payment, shipping, email bevestiging.") %% repo: checkoutservice
-  Container(cart, "Cart Service", ".NET/C# (gRPC)", "Leest/schrijft winkelwagen items in Redis.") %% repo: cartservice
-  Container(product, "Product Catalog Service", "Go (gRPC)", "Productlijst, zoeken, productdetails. (Brondata/DB).") %% repo: productcatalogservice
-  Container(currency, "Currency Service", "Node.js (gRPC)", "Converteert bedragen tussen valuta; haalt real-world koersen op.") %% repo: currencyservice
-  Container(payment, "Payment Service", "Node.js (gRPC)", "Verwerkt creditcard charge (mock) en geeft transactie-id terug.") %% repo: paymentservice
-  Container(shipping, "Shipping Service", "Go (gRPC)", "Berekening shipping cost en verzendproces (mock).") %% repo: shippingservice
-  Container(email, "Email Service", "Python (gRPC)", "Verstuurt order confirmation email (mock).") %% repo: emailservice
-  Container(reco, "Recommendation Service", "Python (gRPC)", "Aanbevelingen op basis van items in cart.") %% repo: recommendationservice
-  Container(ads, "Ad Service", "Java (gRPC)", "Tekst-ads op basis van contextwoorden.") %% repo: adservice
+subgraph region["AWS Region eu-west-1"]
+subgraph vpc["VPC 10.0.0.0/16"]
 
-  Container(redis, "Cart Data Store", "Redis", "Sessiegerelateerde cart storage (key-value).")
+igw[Internet Gateway]
 
-  ContainerDb(rds_app, "Relational Database", "PostgreSQL (SQL)", "Persistente data (product master, orders, payments metadata, auditing).")
+%% ROUTING
+rtb_public["Public RT\n0.0.0.0/0 -> IGW"]
+rtb_priv_a["Private RT AZ-A\n0.0.0.0/0 -> NAT-A"]
+rtb_priv_b["Private RT AZ-B\n0.0.0.0/0 -> NAT-B"]
 
-  Container(obj, "Object Storage", "S3-compatible", "Product images, uploads, receipts (immutable artifacts).")
+%% SECURITY GROUPS
+sg_alb["SG-ALB\nIN:443/80 ANY\nOUT:80 SG-APP"]
+sg_app["SG-APP\nIN:80 from ALB\nIN:50051 SG-APP\nOUT:443 NAT\nOUT:5432 RDS\nOUT:6379 REDIS"]
+sg_rds["SG-RDS\nIN:5432 SG-APP"]
+sg_redis["SG-REDIS\nIN:6379 SG-APP"]
+sg_bastion["SG-BASTION\nIN:22 Admin IP"]
 
-  Container(queue, "Message Broker", "SQS/RabbitMQ", "Asynchrone events: order-created, payment-confirmed, shipment-created, email-send.")
+%% =========================
+%% AZ A
+%% =========================
 
-  Container(otel, "Telemetry Collector", "OpenTelemetry Collector", "Centraliseert traces/metrics/logs forwarding.")
-  Container(mon, "Monitoring/Alerting", "Prometheus + Grafana", "Dashboards, alerts, SLOs.")
-  Container(logs, "Central Logging", "ELK / OpenSearch", "Log ingestie, correlatie met trace-id.")
-  Container(sec, "Secrets Manager Client", "SDK/Sidecar", "Runtime ophalen van secrets (DB creds, API keys).")
+subgraph az_a["Availability Zone A"]
 
-  Container(loadgen, "Load Generator", "Locust", "Simuleert realistische user flows (test/benchmark).") %% repo: loadgenerator
-}
+subgraph pub_a["Public Subnet A 10.0.1.0/24"]
+alb["Application Load Balancer\nHTTPS Listener 443"]
+nat_a["NAT Gateway A"]
+bastion["Bastion Host\nEC2 t3.micro"]
+end
 
-Rel(shopper, lb, "Gebruikt webapp", "HTTPS 443")
-Rel(admin, lb, "Admin acties (optionele admin UI/API)", "HTTPS 443")
+subgraph app_a["Private App Subnet A 10.0.11.0/24"]
+fe_a["EC2 Frontend A\nt3.medium"]
+be_a["EC2 Backend A\nm5.large"]
+otel_a["OTel Agent A"]
+end
 
-Rel(lb, frontend, "Route /, /product, /cart, /checkout", "HTTP 80 -> internal")
-Rel(frontend, product, "Product listing/search/detail", "gRPC 50051")
-Rel(frontend, cart, "Add/remove/view cart", "gRPC 50051")
-Rel(frontend, currency, "Price conversion / display", "gRPC 50051")
-Rel(frontend, reco, "Recommendations for user/cart", "gRPC 50051")
-Rel(frontend, ads, "Contextual ads", "gRPC 50051")
-Rel(frontend, checkout, "Checkout submit", "gRPC 50051")
+subgraph data_a["Private Data Subnet A 10.0.21.0/24"]
+rds_primary["RDS PostgreSQL Primary\ndb.m5.large"]
+redis_primary["Redis Primary\ncache.t3.medium"]
+end
 
-Rel(checkout, cart, "Get cart content", "gRPC 50051")
-Rel(checkout, payment, "Charge card / authorize", "gRPC 50051")
-Rel(checkout, shipping, "Quote + ship items", "gRPC 50051")
-Rel(checkout, email, "Send confirmation", "gRPC 50051")
-Rel(checkout, currency, "Final currency conversion", "gRPC 50051")
+end
 
-Rel(cart, redis, "Read/write cart", "TCP 6379")
+%% =========================
+%% AZ B
+%% =========================
 
-Rel(product, rds_app, "Read product data", "SQL 5432")
-Rel(checkout, rds_app, "Write order + audit trail", "SQL 5432")
-Rel(frontend, obj, "Fetch product images", "HTTPS 443")
-Rel(product, obj, "Manage product images (admin pipeline)", "HTTPS 443")
+subgraph az_b["Availability Zone B"]
 
-Rel(checkout, queue, "Publish order events", "AMQP/HTTPS")
-Rel(email, queue, "Consume email-send jobs", "AMQP/HTTPS")
-Rel(shipping, queue, "Consume shipment jobs, publish tracking", "AMQP/HTTPS")
-Rel(payment, queue, "Publish payment status", "AMQP/HTTPS")
+subgraph pub_b["Public Subnet B 10.0.2.0/24"]
+nat_b["NAT Gateway B"]
+end
 
-Rel(frontend, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
-Rel(checkout, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
-Rel(cart, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
-Rel(product, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
-Rel(currency, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
-Rel(payment, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
-Rel(shipping, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
-Rel(email, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
-Rel(reco, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
-Rel(ads, otel, "Traces/metrics/logs", "OTLP gRPC 4317")
+subgraph app_b["Private App Subnet B 10.0.12.0/24"]
+fe_b["EC2 Frontend B\nt3.medium"]
+be_b["EC2 Backend B\nm5.large"]
+otel_b["OTel Agent B"]
+end
 
-Rel(otel, mon, "Export metrics", "Prometheus scrape 9090")
-Rel(otel, logs, "Forward logs", "HTTPS 443")
+subgraph data_b["Private Data Subnet B 10.0.22.0/24"]
+rds_standby["RDS Standby\nMulti-AZ"]
+redis_replica["Redis Replica"]
+end
 
-Rel(loadgen, lb, "Synthetic traffic for tests", "HTTPS 443")
+end
 
-Rel(frontend, sec, "Fetch secrets/config at runtime", "HTTPS 443")
-Rel(checkout, sec, "Fetch secrets/config at runtime", "HTTPS 443")
-Rel(product, sec, "Fetch secrets/config at runtime", "HTTPS 443")
-Rel(cart, sec, "Fetch secrets/config at runtime", "HTTPS 443")
-Rel(payment, sec, "Fetch secrets/config at runtime", "HTTPS 443")
-Rel(email, sec, "Fetch secrets/config at runtime", "HTTPS 443")
-Rel(shipping, sec, "Fetch secrets/config at runtime", "HTTPS 443")
-Rel(currency, sec, "Fetch secrets/config at runtime", "HTTPS 443")
-Rel(reco, sec, "Fetch secrets/config at runtime", "HTTPS 443")
-Rel(ads, sec, "Fetch secrets/config at runtime", "HTTPS 443")
+%% =========================
+%% SHARED SERVICES
+%% =========================
+
+s3["S3 Object Storage\nImages / Uploads"]
+secrets["Secrets Manager"]
+cloudwatch["CloudWatch Logs"]
+prometheus["Prometheus"]
+grafana["Grafana Dashboard"]
+
+end
+end
+
+%% =========================
+%% EDGE FLOW
+%% =========================
+
+users -->|DNS Query| dns_public
+dns_public -->|A Record| alb
+
+users -->|HTTPS 443| internet
+internet --> waf
+waf --> alb
+
+%% =========================
+%% SECURITY GROUP BINDINGS
+%% =========================
+
+sg_alb -.-> alb
+sg_app -.-> fe_a
+sg_app -.-> fe_b
+sg_app -.-> be_a
+sg_app -.-> be_b
+sg_rds -.-> rds_primary
+sg_rds -.-> rds_standby
+sg_redis -.-> redis_primary
+sg_redis -.-> redis_replica
+sg_bastion -.-> bastion
+
+%% =========================
+%% ROUTING
+%% =========================
+
+igw --- vpc
+rtb_public --> igw
+rtb_priv_a --> nat_a
+rtb_priv_b --> nat_b
+
+rtb_public -.-> pub_a
+rtb_public -.-> pub_b
+rtb_priv_a -.-> app_a
+rtb_priv_a -.-> data_a
+rtb_priv_b -.-> app_b
+rtb_priv_b -.-> data_b
+
+%% =========================
+%% LOAD BALANCING
+%% =========================
+
+alb -->|HTTP 80 Forward| fe_a
+alb -->|HTTP 80 Forward| fe_b
+
+alb -->|Health Checks| fe_a
+alb -->|Health Checks| fe_b
+
+%% =========================
+%% APPLICATION FLOWS
+%% =========================
+
+%% Frontend to Backend
+fe_a -->|gRPC 50051| be_a
+fe_b -->|gRPC 50051| be_b
+be_a <--> |Cross-AZ gRPC| be_b
+
+%% Backend to DB
+be_a -->|SQL 5432| rds_primary
+be_b -->|SQL 5432| rds_primary
+
+%% Redis
+be_a -->|TCP 6379| redis_primary
+be_b -->|TCP 6379| redis_replica
+
+%% =========================
+%% HA REPLICATION
+%% =========================
+
+rds_primary -.->|Sync Replication| rds_standby
+redis_primary -.->|Async Replication| redis_replica
+
+%% =========================
+%% OUTBOUND TRAFFIC
+%% =========================
+
+be_a -->|HTTPS 443 Updates/APIs| nat_a
+be_b -->|HTTPS 443 Updates/APIs| nat_b
+
+nat_a --> igw
+nat_b --> igw
+
+%% =========================
+%% STORAGE
+%% =========================
+
+fe_a -->|HTTPS 443| s3
+fe_b -->|HTTPS 443| s3
+be_a -->|HTTPS 443| s3
+be_b -->|HTTPS 443| s3
+
+%% =========================
+%% SECRETS
+%% =========================
+
+fe_a -->|TLS| secrets
+fe_b -->|TLS| secrets
+be_a -->|TLS| secrets
+be_b -->|TLS| secrets
+
+%% =========================
+%% OBSERVABILITY TRAFFIC
+%% =========================
+
+otel_a -->|OTLP Metrics| prometheus
+otel_b -->|OTLP Metrics| prometheus
+
+otel_a -->|Logs| cloudwatch
+otel_b -->|Logs| cloudwatch
+
+prometheus --> grafana
+
+%% =========================
+%% ADMIN ACCESS
+%% =========================
+
+admins -->|SSH 22| bastion
+bastion -->|SSH 22| fe_a
+bastion -->|SSH 22| fe_b
+bastion -->|SSH 22| be_a
+bastion -->|SSH 22| be_b
 ```
 
 ---
