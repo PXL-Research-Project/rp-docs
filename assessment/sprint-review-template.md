@@ -2,11 +2,9 @@
 
 **Project:** Operation UrbanShield - Smart City Privacy
 
-**Squad Naam:** [Naam]
+**Groep:** [Naam]
 
 **Sprint Nummer:** [Nummer]
-
-**Fase:** [Fase 1: Manual PoC / ...]
 
 ---
 
@@ -54,10 +52,6 @@ Hoe presteert het systeem ten opzichte van de eisen van de Stad Berlijn?
 
 Is alles wat we laten zien ook echt "af"?
 
-[] ...
-[] ...
-[] ...
-
 ---
 
 ## Feedback Product Owner
@@ -73,4 +67,3 @@ Wat is de prioriteit voor de komende sprint om de volgende milestone te bereiken
 
 1. [Prioriteit 1]
 2. [Prioriteit 2]
-
