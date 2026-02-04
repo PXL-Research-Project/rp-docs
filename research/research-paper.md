@@ -6,6 +6,18 @@ Het doel is niet enkel theoretisch onderzoek, maar het implementeren van een Pro
 
 ---
 
+## Titelpagina
+
+De titelpagina wordt aangeleverd als apart document volgens het officiële PXL-template.
+
+---
+
+## Inhoudsopgave
+
+De inhoudsopgave wordt automatisch gegenereerd in de finale paper.
+
+---
+
 ## Doel van het Research Component
 
 Het researchgedeelte heeft drie hoofddoelen:
@@ -21,6 +33,8 @@ De primaire toolingcontext voor dit project is Datadog, in lijn met de observabi
 ## Verplichte Structuur van de Paper
 
 De paper moet opgebouwd zijn volgens onderstaande structuur.
+
+---
 
 ### Abstract
 
@@ -71,7 +85,7 @@ Dit gedeelte moet reproduceerbaar zijn voor andere teams.
 
 ---
 
-### Literature Study
+### Bronbespreking (Literature Study)
 
 Analyseer relevante bronnen:
 
@@ -85,6 +99,8 @@ Doel:
 - Context creëren
 - Hypotheses onderbouwen
 - Vergelijkingsmateriaal aanleveren
+
+Bronnen moeten beoordeeld worden op relevantie en betrouwbaarheid volgens CRAAP-principes.
 
 ---
 
@@ -152,6 +168,57 @@ Focus op:
 - Samenwerking
 - Probleemoplossing
 - Besluitvorming
+
+---
+
+## Bibliografie
+
+Alle gebruikte bronnen moeten correct opgenomen worden volgens APA of IEEE referentiestijl.
+
+---
+
+## AI Usage Declaration
+
+Indien AI-tools gebruikt worden tijdens het researchproces of bij het schrijven van de paper:
+
+Verplicht te vermelden:
+
+- Welke AI-tool(s) gebruikt werden
+- Voor welke taken (bv. brainstorming, herformuleren, code-analyse)
+- Voorbeeldprompts
+- Manuele validatie van gegenereerde inhoud
+
+Onvermeld AI-gebruik wordt beschouwd als academische fout.
+
+---
+
+## Validatie Onderzoek (VO)
+
+De Validatie Onderzoek vindt plaats tijdens Sprint 1 (SR0).
+
+Tijdens deze sessie worden beoordeeld:
+
+- Onderzoeksvraag
+- Methodologie
+- Bronnenselectie
+
+Goedkeuring van VO is verplicht om verder te mogen gaan naar de uitvoeringsfase.
+
+---
+
+## Realisatie & Research Artefacten
+
+Artefacten vormen het bewijs van de onderzoeksuitvoering.
+
+Voorbeelden:
+
+- Monitoring dashboards
+- Load test resultaten
+- Meetlogboeken
+- Grafieken
+- Screenshots van configuraties
+
+Deze artefacten worden gebruikt tijdens Sprint Reviews en de eindpresentatie.
 
 ---
 

@@ -4,6 +4,15 @@ Elke projectgroep kiest één research track. Deze bepaalt de focus van het appl
 
 Het onderzoek moet aantoonbaar geïntegreerd zijn in de projectinfrastructuur.
 
+Elke research track moet het PXL onderzoeksproces volgen:
+
+- Ontwerpen (Sprint 1)
+- Gegevens verzamelen (Sprint 2)
+- Uitvoering en analyse (Sprint 3)
+- Evaluatie en conclusie (Final delivery)
+
+Tracks die deze flow niet respecteren worden niet aanvaard.
+
 ---
 
 ## Track Selectie Model
@@ -267,7 +276,7 @@ Zonder goedkeuring wordt het topic niet beoordeeld.
 
 Elke track moet volledig gevolgd worden binnen de structuur van:
 
-Project → Research Paper Guidelines
+Project → Research Paper Richtlijnen
 
 De paper moet aantonen:
 

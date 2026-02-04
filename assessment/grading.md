@@ -1,6 +1,3 @@
-# grading.md
-
-```md
 # Evaluatie en Beoordeling
 
 Dit document beschrijft de beoordelingsstructuur van het PXLCensor project en het research paper.
@@ -94,27 +91,3 @@ Om te slagen moet voldaan zijn aan:
 - Deelname aan projectmomenten
 
 Niet voldoen aan kerncomponenten resulteert in niet-slaagbaar resultaat, ongeacht puntenverdeling.
-```
-
----
-
-### Wat bewust NIET werd overgenomen uit het Word-document
-
-* NexGen Software case (vervangen door PXLCensor scenario)
-* Jenkins CI/CD beschrijvingen
-* Docker Compose flows
-* MySQL specifieke architectuur
-* API Gateway focus
-* DynamoDB microservice uitbreiding
-* Blackboard administratieve tekst
-* Template verwijzingen
-
----
-
-Volgende stap die ik kan uitvoeren indien gewenst:
-
-* README bijwerken met links naar deze nieuwe docs
-* Navigatiestructuur voorstellen voor GitHub Pages sidebar
-* Terminologie harmoniseren tussen `pxlcensor-assignment-25-26.md` en research docs
-* Consistentiecheck uitvoeren tussen backlog milestones en research deliverables
-
