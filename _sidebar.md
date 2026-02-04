@@ -11,6 +11,7 @@
   * [Rubric](assessment/rubric.md)
   * [Grading](assessment/grading.md)
   * [Diagrams](assessment/diagrams.md)
+  * [Example Diagrams](assessment/example-diagrams.md)
   * [Artifacts](assessment/artifacts.md)
 
 * Planning
