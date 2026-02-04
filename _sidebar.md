@@ -3,6 +3,8 @@
 * Research Project
   * [Home](README.md)
   * [Opdracht](course/pxlcensor-assignment-25-26.md)
+  * [Research Tracks](research/tracks.md)
+
 
 * Assessment
   * [Sprint Review Template](assessment/sprint-review-template.md)
