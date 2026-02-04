@@ -16,6 +16,7 @@
 * Planning
   * [Milestones](planning/milestones.md)
   * [Backlog](planning/backlog.md)
+  * [Weekplanning](planning/week_planning.md)
 
 * PXL
   * [Process](project/process.md)
