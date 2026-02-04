@@ -286,3 +286,9 @@ De paper moet aantonen:
 - Reflectie op technische keuzes  
 
 Theoretische papers zonder operationele PoC worden niet aanvaard.
+
+---
+
+## Nuttige Links
+
+- [Soorten onderzoeksvragen perfect formuleren (met voorbeelden)](https://www.scribbr.nl/starten-met-je-scriptie/type-onderzoeksvragen/)

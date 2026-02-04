@@ -21,3 +21,6 @@
 * PXL
   * [Process](project/process.md)
   * [PXL Regels en procedures](pxl/procedures.md)
+
+* Reference
+  * [Agile/Scrum info](reference/agile.md)
