@@ -1,40 +1,5 @@
 # Research Tracks — Approved Topics & Custom Proposals
 
-- [Track Selectie Model](#track-selectie-model)
-- [Track A — Autoscaling \& Processing Performance](#track-a--autoscaling--processing-performance)
-  - [Doel](#doel)
-  - [Hoofdonderzoeksvraag](#hoofdonderzoeksvraag)
-  - [Mogelijke Subvragen](#mogelijke-subvragen)
-  - [Verplichte PoC Componenten](#verplichte-poc-componenten)
-  - [Verwachte Output](#verwachte-output)
-- [Track B — Full-Stack Observability \& Incident Detection](#track-b--full-stack-observability--incident-detection)
-  - [Doel](#doel-1)
-  - [Hoofdonderzoeksvraag](#hoofdonderzoeksvraag-1)
-  - [Mogelijke Subvragen](#mogelijke-subvragen-1)
-  - [Verplichte PoC Componenten](#verplichte-poc-componenten-1)
-  - [Verwachte Output](#verwachte-output-1)
-- [Track C — Monitoring Tool Comparison (Datadog vs CloudWatch)](#track-c--monitoring-tool-comparison-datadog-vs-cloudwatch)
-  - [Doel](#doel-2)
-  - [Hoofdonderzoeksvraag](#hoofdonderzoeksvraag-2)
-  - [Mogelijke Subvragen](#mogelijke-subvragen-2)
-  - [Verplichte PoC Componenten](#verplichte-poc-componenten-2)
-  - [Verwachte Output](#verwachte-output-2)
-- [Track D — Capacity Planning \& Cost Efficiency](#track-d--capacity-planning--cost-efficiency)
-  - [Doel](#doel-3)
-  - [Hoofdonderzoeksvraag](#hoofdonderzoeksvraag-3)
-  - [Mogelijke Subvragen](#mogelijke-subvragen-3)
-  - [Verplichte PoC Componenten](#verplichte-poc-componenten-3)
-  - [Verwachte Output](#verwachte-output-3)
-- [Vereisten voor Custom Proposals](#vereisten-voor-custom-proposals)
-- [In te dienen Proposal Template](#in-te-dienen-proposal-template)
-  - [Project Context](#project-context)
-  - [Research Question](#research-question)
-  - [Hypothesis](#hypothesis)
-  - [Proposed Methodology](#proposed-methodology)
-  - [Planned PoC](#planned-poc)
-- [Goedkeuringsproces](#goedkeuringsproces)
-
-
 Elke projectgroep kiest één research track. Deze bepaalt de focus van het applied research component en de bijhorende Proof of Concept (PoC).
 
 Het onderzoek moet aantoonbaar geïntegreerd zijn in de projectinfrastructuur.
