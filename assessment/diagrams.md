@@ -1,27 +1,5 @@
 # Verplichte Diagrammen — Cloud Web Application Project
 
-- [Overzicht Abstractieniveaus](#overzicht-abstractieniveaus)
-- [System Context Diagram (C4 Level 1)](#system-context-diagram-c4-level-1)
-  - [Beschrijving](#beschrijving)
-  - [Doel](#doel)
-  - [Moet tonen](#moet-tonen)
-  - [Voorbeeldrelaties](#voorbeeldrelaties)
-  - [Checklist](#checklist)
-- [Container Diagram (C4 Level 2)](#container-diagram-c4-level-2)
-  - [Beschrijving](#beschrijving-1)
-  - [Doel](#doel-1)
-  - [Moet minimaal bevatten (voor webapplicaties)](#moet-minimaal-bevatten-voor-webapplicaties)
-  - [Voorbeeldarchitectuur](#voorbeeldarchitectuur)
-  - [Checklist](#checklist-1)
-- [Deployment / Infrastructure Diagram](#deployment--infrastructure-diagram)
-  - [Beschrijving](#beschrijving-2)
-  - [Doel](#doel-2)
-  - [Moet minimaal bevatten](#moet-minimaal-bevatten)
-  - [Best practice vereisten](#best-practice-vereisten)
-  - [Checklist](#checklist-2)
-- [Algemene Richtlijnen](#algemene-richtlijnen)
-- [Beoordelingsfocus](#beoordelingsfocus)
-
 Dit document beschrijft de **verplichte diagrammen**, hun doel, inhoud en de bijhorende beoordelingscriteria voor het cloud deployment project. De diagrammen zijn zo gekozen dat overlap wordt vermeden en elk diagram een duidelijk afgebakend abstractieniveau heeft.
 
 De volgende drie diagrammen zijn verplicht:
