@@ -8,10 +8,9 @@
 
 * Assessment
   * [Sprint Review Template](assessment/sprint-review-template.md)
-  * [Rubric](assessment/rubric.md)
   * [Grading](assessment/grading.md)
   * [Diagrams](assessment/diagrams.md)
-  * [Example Diagrams](assessment/example-diagrams.md)
+  * [Example Diagrams](assessment/example_diagrams.md)
   * [Artifacts](assessment/artifacts.md)
 
 * Planning
