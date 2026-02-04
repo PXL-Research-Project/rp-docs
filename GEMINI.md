@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository hosts the documentation, planning, and backlog for the **PXL Research Project**. The current mission is **"Operation UrbanShield"**, focusing on the deployment of **PXLCensor**—a privacy-focused face anonymization service.
+This repository hosts the documentation, planning, and backlog for the **PXL Research Project**. The current mission is **"Operation UrbanShield"**, focusing on the deployment of **PXLCensor** - a privacy-focused face anonymization service.
 
 ## The Application: PXLCensor
 

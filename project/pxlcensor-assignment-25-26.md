@@ -2,7 +2,7 @@
 
 *UrbanEye AI*, een computer vision startup, is onlangs overgenomen door de stad Berlijn. De stad rolt duizenden high-resolution camera's uit om de traffic flow en emergency response te optimaliseren onder het "Smart City" initiatief.
 
-Berlijn werkt onder een "Privacy First" legal mandate. Het is strikt verboden voor de stad om identificeerbare gezichten, vastgelegd door public sensors, op te slaan of te bekijken. UrbanEye heeft **PXLCensor** ontwikkeld om dit op te lossen—een service die gezichten detecteert en pixelate.
+Berlijn werkt onder een "Privacy First" legal mandate. Het is strikt verboden voor de stad om identificeerbare gezichten, vastgelegd door public sensors, op te slaan of te bekijken. UrbanEye heeft **PXLCensor** ontwikkeld om dit op te lossen - een service die gezichten detecteert en pixelate.
 
 Hoewel het "lab prototype" werkt in Docker, hanteert de City IT Department een **strict No-container policy** voor production cloud instances om de security attack surface te minimaliseren. Jouw taak is om dit containerized prototype te transformeren naar een hardened, high-scale cloud platform met behulp van automation.
 
@@ -17,7 +17,7 @@ Als de Cloud Engineering Task Force moet je PXLCensor migreren naar een resilien
 Aangezien Docker verboden is op de production servers, moet je de "bare metal" deployment automatiseren.
 
 * **AWS Setup:** Architect het netwerk (VPC, Subnets, Security Groups) en de high-availability components (Load Balancer, Auto Scaling Groups) via de AWS Console.
-* **Ansible Orchestration:** Schrijf playbooks om cloud instances vanaf nul te provisionen—installeer Node.js, Python en PostgreSQL, en beheer de services via `systemd`.
+* **Ansible Orchestration:** Schrijf playbooks om cloud instances vanaf nul te provisionen - installeer Node.js, Python en PostgreSQL, en beheer de services via `systemd`.
 
 ### Scaling
 

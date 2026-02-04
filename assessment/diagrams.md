@@ -1,4 +1,4 @@
-# Verplichte Diagrammen — Cloud Web Application Project
+# Verplichte Diagrammen - Cloud Web Application Project
 
 Dit document beschrijft de **verplichte diagrammen**, hun doel, inhoud en de bijhorende beoordelingscriteria voor het cloud deployment project. De diagrammen zijn zo gekozen dat overlap wordt vermeden en elk diagram een duidelijk afgebakend abstractieniveau heeft.
 
