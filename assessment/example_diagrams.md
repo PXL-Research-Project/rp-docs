@@ -2,13 +2,13 @@
 
 ## C4 - L1 System Context Diagram
 
-[C4-L1-System-Context-Diagram](assessment/images/C4-L1-diagramSystemContext.svg)
+![C4-L1-System-Context-Diagram](images/C4-L1-diagramSystemContext.svg)
 
 ---
 
 ## C4 - L2 Container Diagram
 
-[C4-L2-Container-Diagram](assessment/images/C4-L2containers-light.svg)
+![C4-L2-Container-Diagram](images/C4-L2containers-light.svg)
 
 ---
 
