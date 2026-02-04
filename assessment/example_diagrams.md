@@ -2,42 +2,9 @@
 
 ## C4 - L1 System Context Diagram
 
-```mermaid
-C4Context
-title System Context Diagram (C4 Level 1) - "Online Boutique" webapplicatie (scope en externe omgeving)
+[C4-L1-System-Context-Diagram](images/C4-L1-diagramSystemContext.svg)
 
-Person(shopper, "Shopper (Klant)", "Bezoekt webshop, zoekt producten, voegt toe aan winkelwagen, rekent af.")
-Person(admin, "Customer Support / Admin", "Behandelt klantvragen, refunds, order issues, operationele opvolging.")
-Person(marketing, "Marketing / Analyst", "Analyseert conversies, ads, funnel, A/B tests.")
-
-System(boutique, "Online Boutique Web Application", "E-commerce webapplicatie om producten te browsen en aankopen te doen.")
-
-System_Ext(idp, "Identity Provider (OIDC/OAuth2)", "Externe authenticatie (optioneel): SSO, MFA, accountbeheer.")
-System_Ext(payment_provider, "Payment Provider API", "Externe payment gateway (charge/authorize/capture).")
-System_Ext(email_provider, "Email Delivery Service", "Externe mail delivery (transactiemails, deliverability).")
-System_Ext(shipping_carrier, "Shipping/Carrier API", "Externe vervoerder: labels, tracking, shipping rates.")
-System_Ext(fx_rates, "FX Rates Provider", "Externe wisselkoersen (bv. centrale bank / marktdata).")
-System_Ext(ads_network, "Ads Network", "Externe advertentienetwerk / campagne delivery.")
-System_Ext(analytics, "Analytics Platform", "Externe analytics (page views, events, funnels).")
-System_Ext(fraud, "Fraud/Risk Scoring", "Externe risk checks op checkout/betalingen (optioneel).")
-System_Ext(sms, "SMS/Push Provider", "Externe notificaties voor delivery status (optioneel).")
-System_Ext(returns_portal, "Returns Portal", "Extern returns-systeem (RMA, labels) (optioneel).")
-
-Rel(shopper, boutique, "Browse, add-to-cart, checkout via browser/app", "HTTPS")
-Rel(admin, boutique, "Customer support acties (order lookup, refunds, issue tracking)", "HTTPS")
-Rel(marketing, boutique, "Rapportering via dashboards / exports", "HTTPS")
-
-Rel(boutique, idp, "SSO login, token validatie", "OIDC/OAuth2")
-Rel(boutique, payment_provider, "Betaling verwerken (authorize/capture)", "HTTPS")
-Rel(boutique, email_provider, "Orderbevestiging en status mails versturen", "HTTPS/SMTP API")
-Rel(boutique, shipping_carrier, "Shipping rates, labels, tracking updates", "HTTPS")
-Rel(boutique, fx_rates, "Wisselkoersen opvragen voor multi-currency prijzen", "HTTPS")
-Rel(boutique, ads_network, "Ads context / targeting / creatives", "HTTPS")
-Rel(boutique, analytics, "Events en page analytics publiceren", "HTTPS")
-Rel(boutique, fraud, "Fraude/risk check bij checkout", "HTTPS")
-Rel(boutique, sms, "Shipping/Delivery notificaties", "HTTPS")
-Rel(boutique, returns_portal, "Returns/RMA initiatie en status", "HTTPS")
-```
+---
 
 ## C4 - L2 Container Diagram
 
@@ -45,7 +12,7 @@ Rel(boutique, returns_portal, "Returns/RMA initiatie en status", "HTTPS")
 
 ---
 
-## Deployment/Infrastructure diagram
+## Deployment diagram
 
 ```mermaid
 flowchart TB

@@ -6,7 +6,7 @@ De volgende drie diagrammen zijn verplicht:
 
 - System Context Diagram (C4 Level 1)
 - Container Diagram (C4 Level 2)
-- Deployment / Infrastructure Diagram
+- Deployment Diagram
 
 Extra diagrammen mogen toegevoegd worden, maar worden niet meegerekend in de basisbeoordeling.
 
@@ -125,7 +125,7 @@ Dit diagram toont de belangrijkste softwarecomponenten (of "containers", dit is 
 
 ---
 
-## Deployment / Infrastructure Diagram
+## Deployment Diagram
 
 ### Beschrijving
 
