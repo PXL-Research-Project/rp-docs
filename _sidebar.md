@@ -10,4 +10,6 @@
 
 * Planning
 	* [Artifacts](planning/artifacts.md)
+	* [Diagrams](planning/diagrams.md)
+	* [Milestones](planning/milestones.md)
 	* [Backlog](planning/backlog.md)
