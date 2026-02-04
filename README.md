@@ -26,12 +26,12 @@ Het opleidingsonderdeel bestaat uit twee sterk gekoppelde delen.
 
 Studenten werken aan:
 
-- Cloud networking en security design  
-- Service deployment en service management  
-- Automation met configuration management tooling  
-- Scaling en load balancing  
-- Monitoring, logging en alerting  
-- High availability architectuur  
+- Cloud networking en security design
+- Service deployment en service management
+- Automation met configuration management tooling
+- Scaling en load balancing
+- Monitoring, logging en alerting
+- High availability architectuur
 
 De exacte technische context wordt per academiejaar bepaald in de assignment.
 
@@ -41,10 +41,10 @@ De exacte technische context wordt per academiejaar bepaald in de assignment.
 
 Parallel aan het project wordt een onderzoekscomponent uitgevoerd:
 
-- Onderzoek rond monitoring, observability of performance engineering  
-- Experimenten via Proof of Concepts  
-- Data-analyse en evaluatie  
-- Rapportage in een gestructureerde research paper  
+- Onderzoek rond monitoring, observability of performance engineering
+- Experimenten via Proof of Concepts
+- Data-analyse en evaluatie
+- Rapportage in een gestructureerde research paper
 
 De research output moet aantoonbaar gekoppeld zijn aan de projectinfrastructuur.
 
@@ -54,39 +54,18 @@ De research output moet aantoonbaar gekoppeld zijn aan de projectinfrastructuur.
 
 Na het afronden van dit project kan je:
 
-- Werken binnen een professionele cloud engineering context  
-- Infrastructure automation ontwerpen en implementeren  
-- Observability tooling correct configureren en interpreteren  
-- Architecturale beslissingen onderbouwen met data  
-- Samenwerken in een agile projectomgeving  
-- Technische documentatie opstellen volgens professionele standaarden  
-
----
-
-## Navigatie
-
-De documentatie is opgesplitst in vaste categorieën:
-
-- **Assignment**  
-  Projectcontext en opdrachtomschrijving voor het huidige academiejaar  
-
-- **Project**  
-  Procesafspraken en research richtlijnen  
-
-- **Planning**  
-  Backlog, sprintplanning, milestones en diagramvereisten  
-
-- **Delivery**  
-  Vereiste artifacts en opleveringen  
-
-- **Assessment**  
-  Evaluatiecriteria en rubrics  
+- Werken binnen een professionele cloud engineering context
+- Infrastructure automation ontwerpen en implementeren
+- Observability tooling correct configureren en interpreteren
+- Architecturale beslissingen onderbouwen met data
+- Samenwerken in een agile projectomgeving
+- Technische documentatie opstellen volgens professionele standaarden
 
 Gebruik het sidebar menu om doorheen de documentatie te navigeren.
 
 ---
 
-Succes met het project.
+Succes!
 
 ---
 

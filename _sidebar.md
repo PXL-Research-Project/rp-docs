@@ -2,8 +2,8 @@
 
 * Research Project
   * [Home](README.md)
-  * [Opdracht](course/pxlcensor-assignment-25-26.md)
-  * [Research Tracks](research/tracks.md)
+  * [Opdracht](assignment/pxlcensor-assignment-25-26.md)
+  * [Research Tracks](research/research-tracks.md)
 
 
 * Assessment
