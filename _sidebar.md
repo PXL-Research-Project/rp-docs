@@ -13,3 +13,6 @@
   * [Diagrams](planning/diagrams.md)
   * [Milestones](planning/milestones.md)
   * [Backlog](planning/backlog.md)
+
+* PXL
+  * [PXL Regels en procedures](pxl/procedures.md)
