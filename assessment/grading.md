@@ -67,6 +67,19 @@ Verdeling binnen het paper:
 
 ---
 
+## Research Component (35% van totaal)
+
+Onderstaande verdeling is binnen het researchgedeelte (100% van 35%):
+
+| Deliverable | Omvang | Communicatieskills | Inhoud |
+| --- | --- | --- | --- |
+| Projectomschrijving | 1 pagina | 10% | 10% |
+| Presentatie verantwoording onderzoek | PPT + 15 min/groep mondeling | 10% | 10% |
+| Paper | Titelblad (1p), PO (1p), Inhoudsopgave (1p), Lijst afkortingen (1p), Bronbespreking (2p), Conclusie (1p), Verantwoording AI (1p) | - | 20% |
+| Realisatie | PPT, artefacten, presentatie 15 min/groep | 10% | 30% |
+
+---
+
 ## Peer Evaluation
 
 Peer assessment kan invloed hebben op het individuele eindresultaat.

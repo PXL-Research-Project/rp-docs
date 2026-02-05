@@ -51,3 +51,14 @@ De ultieme validatie van de productie-waardigheid.
 * **Load Test Report:** Resultaten van een tool zoals Locust of JMeter die de response times en throughput laten zien tijdens een gesimuleerde piekbelasting.
 * **Scaling Event History:** Een screenshot van de AWS Auto Scaling history waaruit blijkt dat er daadwerkelijk nieuwe nodes zijn bijgeplaatst tijdens de load test.
 * **Self-Healing Proof:** Een video of log-overzicht waarin te zien is dat een handmatig "gekillde" service of een vastgelopen 4K-processing job door het systeem wordt gedetecteerd en hersteld.
+
+---
+
+### Research Artefacten (Blackboard)
+
+Artefacten worden op Blackboard geupload en kunnen onder meer bestaan uit:
+
+* CRAAP-testen van elke bron die in overweging is genomen
+* Link naar een GitHub repo met een proof-of-concept of testopstelling
+* Jupyter notebooks met metingen, resultaten en grafieken
+* Overige onderzoeksdocumenten (bv. meetlogboeken of configuratie-overzichten)
