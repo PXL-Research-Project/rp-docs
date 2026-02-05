@@ -1,5 +1,7 @@
 # Sprint Planning & Roadmap
 
+INTERN - enkel voor lectoren. Dit document is niet zichtbaar voor studenten.
+
 Dit document bevat de planning, inschattingen en verdeling van de User Stories over de 3 sprints.
 
 **Team Capaciteit:**
@@ -22,11 +24,11 @@ Dit document bevat de planning, inschattingen en verdeling van de User Stories o
 
 | ID | Title | Priority | Story Points | Assignee | Status |
 |----|-------|----------|--------------|----------|--------|
-| **US-101** | **Secure Network Architecture (VPC)** | High | 5 | | To Do |
-| **US-102** | **Managed Database Deployment (RDS)** | High | 3 | | To Do |
-| **US-103** | **Backend Deployment (EC2 Manual)** | High | 8 | | To Do |
-| **US-104** | Frontend Hosting (Nginx Manual) | Medium | 3 | | To Do |
-| **Tech-01** | Git Repository Setup & Access | High | 1 | | To Do |
+| **US-01** | **Secure Network Architecture (VPC)** | High | 5 | | To Do |
+| **US-02** | **Managed Database Deployment (RDS)** | High | 3 | | To Do |
+| **US-03** | **Bare-Metal Application Deployment (EC2)** | High | 8 | | To Do |
+| **US-04** | Frontend Hosting (Nginx Manual) | Medium | 3 | | To Do |
+| **TECH-01** | Git Repository Setup & Access | High | 1 | | To Do |
 
 **Sprint Doel:** Een werkende applicatie op AWS, zelfs als deze handmatig is gestart en nog niet schaalt.
 **Totaal Punten:** ~20
@@ -38,11 +40,11 @@ Dit document bevat de planning, inschattingen en verdeling van de User Stories o
 
 | ID | Title | Priority | Story Points | Assignee | Status |
 |----|-------|----------|--------------|----------|--------|
-| **US-201** | **Ansible Inventory & Base Config** | High | 3 | | To Do |
-| **US-202** | **Service Management (Systemd)** | High | 5 | | To Do |
-| **US-203** | App Deployment Playbooks | High | 5 | | To Do |
-| **US-204** | Ansible Vault (Secrets) | Medium | 3 | | To Do |
-| **Tech-02** | Domain Name & DNS (Route53) | Low | 2 | | To Do |
+| **US-05** | **Ansible Inventory & Base Config** | High | 3 | | To Do |
+| **US-06** | **Service Management (Systemd)** | High | 5 | | To Do |
+| **US-07** | App Deployment Playbooks | High | 5 | | To Do |
+| **US-08** | Ansible Vault (Secrets) | Medium | 3 | | To Do |
+| **TECH-02** | Domain Name & DNS (Route53) | Low | 2 | | To Do |
 
 **Sprint Doel:** Geen SSH meer nodig voor updates. Deployment gebeurt via `ansible-playbook`.
 **Totaal Punten:** ~18
@@ -54,11 +56,11 @@ Dit document bevat de planning, inschattingen en verdeling van de User Stories o
 
 | ID | Title | Priority | Story Points | Assignee | Status |
 |----|-------|----------|--------------|----------|--------|
-| **US-301** | **Elastic Scaling (ASG)** | High | 8 | | To Do |
-| **US-302** | **Identity Integration (Keycloak)** | Medium | 5 | | To Do |
-| **US-303** | **Full-Stack Observability (Datadog)** | Medium | 5 | | To Do |
-| **US-304** | Load Balancing (ALB + SSL)** | High | 5 | | To Do |
-| **Tech-03** | Final Load Test & Demo Prep | High | 3 | | To Do |
+| **US-11** | **Elastic Compute Scaling (ASG)** | High | 8 | | To Do |
+| **US-10** | **Secure Identity Integration (Keycloak SSO)** | Medium | 5 | | To Do |
+| **US-12** | **Full-Stack Observability (Datadog)** | Medium | 5 | | To Do |
+| **US-09** | Load Balancing (ALB + SSL) | High | 5 | | To Do |
+| **TECH-03** | Final Load Test & Demo Prep | High | 3 | | To Do |
 
 **Sprint Doel:** Een zelf-helend, veilig en inzichtelijk systeem dat klaar is voor de "Rush Hour" demo.
 **Totaal Punten:** ~26 (Ambitieus, mogelijk overflow taken)
