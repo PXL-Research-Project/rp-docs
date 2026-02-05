@@ -13,9 +13,9 @@ Dit document beschrijft de beoordelingsstructuur van het project en het research
 
 ---
 
-## Project Evaluatie Criteria
+## Project Evaluatie (65%)
 
-Beoordelingsaspecten:
+Beoordelingsaspecten (kwalitatief):
 
 ### Technische Implementatie
 
@@ -53,20 +53,6 @@ Beoordelingsaspecten:
 
 ---
 
-## Research Paper Evaluatie
-
-Verdeling binnen het paper:
-
-| Onderdeel | Gewicht |
-| --- | --- |
-| Methodology en Literature Study | 20% |
-| Implementation en Experimenten | 60% |
-| Conclusion | 10% |
-| Reflection | 5% |
-| Abstract | 5% |
-
----
-
 ## Research Component (35% van totaal)
 
 Onderstaande verdeling is binnen het researchgedeelte (100% van 35%):
@@ -77,6 +63,20 @@ Onderstaande verdeling is binnen het researchgedeelte (100% van 35%):
 | Presentatie verantwoording onderzoek | PPT + 15 min/groep mondeling | 10% | 10% |
 | Paper | Titelblad (1p), PO (1p), Inhoudsopgave (1p), Lijst afkortingen (1p), Bronbespreking (2p), Conclusie (1p), Verantwoording AI (1p) | - | 20% |
 | Realisatie | PPT, artefacten, presentatie 15 min/groep | 10% | 30% |
+
+---
+
+## Paper Grading (binnen Research Component)
+
+Deze verdeling geldt **binnen** het Paper-deel hierboven (20% van het researchgedeelte).
+
+| Onderdeel | Gewicht |
+| --- | --- |
+| Methodology en Literature Study | 20% |
+| Implementation en Experimenten | 60% |
+| Conclusion | 10% |
+| Reflection | 5% |
+| Abstract | 5% |
 
 ---
 
