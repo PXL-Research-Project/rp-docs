@@ -27,13 +27,15 @@ Geen losse features, maar een proces-gebaseerde demonstratie voor de Product Own
 
 Presentatie van de bewijslast die de kwaliteit van het werk onderbouwt.
 
-| Artifact | Beschrijving & Locatie (Link/Repo) | Status |
+**Voorbeelden (kies wat relevant is voor jullie sprint):**
+
+| Artifact (voorbeeld) | Beschrijving & Locatie (Link/Repo) | Status |
 | --- | --- | --- |
-| **Architecture Diagram** | Visuele weergave van de huidige cloud-infra. | [Voltooid/In progress] |
+| **Architectuur-bewijs** | Diagram of overzicht van de huidige infrastructuur. | [Voltooid/In progress] |
 | **Automation Evidence** | Bewijs van geautomatiseerde deployment en idempotency. | [Link naar Git] |
-| **Monitoring Dashboards** | Live view van systeemgezondheid en metrics. | [Screenshot/Link] |
-| **Load Test Reports** | Resultaten van de stresstest en scaling reactie. | [PDF/Log] |
-| **Security Audit** | Bewijs van HTTPS, identity-integratie en header-auth. | [Testrapport] |
+| **Monitoring Evidence** | Dashboards of metrics die live data tonen. | [Screenshot/Link] |
+| **Load Test Evidence** | Resultaten van stresstesten of load-simulatie. | [PDF/Log] |
+| **Security Evidence** | Bewijs van HTTPS, identity-integratie en header-auth. | [Testrapport] |
 
 ---
 
