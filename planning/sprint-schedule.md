@@ -28,6 +28,8 @@ Dit document bevat de planning, inschattingen en verdeling van de User Stories o
 | **US-02** | **Managed Database Deployment (RDS)** | High | 3 | | To Do |
 | **US-03** | **Bare-Metal Application Deployment (EC2)** | High | 8 | | To Do |
 | **US-04** | Frontend Hosting (Nginx Manual) | Medium | 3 | | To Do |
+| **US-05** | Load Balancer (Manual ALB + SSL) | Medium | 3 | | To Do |
+| **US-11** | Keycloak SSO (Manual Setup) | Medium | 5 | | To Do |
 | **TECH-01** | Git Repository Setup & Access | High | 1 | | To Do |
 
 **Sprint Doel:** Een werkende applicatie op AWS, zelfs als deze handmatig is gestart en nog niet schaalt.
@@ -40,10 +42,10 @@ Dit document bevat de planning, inschattingen en verdeling van de User Stories o
 
 | ID | Title | Priority | Story Points | Assignee | Status |
 |----|-------|----------|--------------|----------|--------|
-| **US-05** | **Ansible Inventory & Base Config** | High | 3 | | To Do |
-| **US-06** | **Service Management (Systemd)** | High | 5 | | To Do |
-| **US-07** | App Deployment Playbooks | High | 5 | | To Do |
-| **US-08** | Ansible Vault (Secrets) | Medium | 3 | | To Do |
+| **US-06** | **Ansible Inventory & Base Config** | High | 3 | | To Do |
+| **US-07** | **Service Management (Systemd)** | High | 5 | | To Do |
+| **US-08** | App Deployment Playbooks | High | 5 | | To Do |
+| **US-09** | Ansible Vault (Secrets) | Medium | 3 | | To Do |
 | **TECH-02** | Domain Name & DNS (Route53) | Low | 2 | | To Do |
 
 **Sprint Doel:** Geen SSH meer nodig voor updates. Deployment gebeurt via `ansible-playbook`.
@@ -56,10 +58,10 @@ Dit document bevat de planning, inschattingen en verdeling van de User Stories o
 
 | ID | Title | Priority | Story Points | Assignee | Status |
 |----|-------|----------|--------------|----------|--------|
-| **US-11** | **Elastic Compute Scaling (ASG)** | High | 8 | | To Do |
-| **US-10** | **Secure Identity Integration (Keycloak SSO)** | Medium | 5 | | To Do |
-| **US-12** | **Full-Stack Observability (Datadog)** | Medium | 5 | | To Do |
-| **US-09** | Load Balancing (ALB + SSL) | High | 5 | | To Do |
+| **US-13** | **Elastic Compute Scaling (ASG)** | High | 8 | | To Do |
+| **US-12** | **Keycloak SSO Automation (IaC/Ansible)** | Medium | 5 | | To Do |
+| **US-14** | **Full-Stack Observability (Datadog)** | Medium | 5 | | To Do |
+| **US-10** | Load Balancing Automation (ALB + SSL via IaC) | High | 5 | | To Do |
 | **TECH-03** | Final Load Test & Demo Prep | High | 3 | | To Do |
 
 **Sprint Doel:** Een zelf-helend, veilig en inzichtelijk systeem dat klaar is voor de "Rush Hour" demo.

@@ -86,9 +86,23 @@ Voordat we Ansible scripts kunnen schrijven, moeten we weten wat de applicatie n
 
 ---
 
+### US-05: Load Balancer (Manual ALB + SSL)
+**User Story**
+> **Als** Platform Engineer,
+> **wil ik** handmatig een Application Load Balancer met HTTPS configureren,
+> **zodat** verkeer veilig verdeeld wordt en we een stabiel demo-endpoint hebben.
+
+**Acceptatiecriteria**
+- [ ] **ALB:** Load balancer is actief en gekoppeld aan target groups.
+- [ ] **Health Checks:** Health checks zijn geconfigureerd.
+- [ ] **HTTPS:** SSL-certificaat is actief (ACM).
+- [ ] **Routing:** Frontend en API routes worden correct doorgestuurd.
+
+---
+
 ## Topic: Automation & Ops
 
-### US-05: Ansible Inventory & Base Configuration
+### US-06: Ansible Inventory & Base Configuration
 **User Story**
 > **Als** System Administrator,
 > **wil ik** een geautomatiseerde basisconfiguratie uitrollen over al mijn servers,
@@ -108,7 +122,7 @@ We stappen over van "inloggen en typen" naar "push configuration". De eerste sta
 
 ---
 
-### US-06: Service Management Automation (Systemd)
+### US-07: Service Management Automation (Systemd)
 **User Story**
 > **Als** Site Reliability Engineer (SRE),
 > **wil ik** dat de applicatie-services worden beheerd door het OS-init systeem (systemd),
@@ -128,7 +142,7 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 
 ---
 
-### US-07: App Deployment Playbooks
+### US-08: App Deployment Playbooks
 **User Story**
 > **Als** Release Engineer,
 > **wil ik** een geautomatiseerde deployment van de applicaties via Ansible,
@@ -141,7 +155,7 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 
 ---
 
-### US-08: Ansible Vault (Secrets)
+### US-09: Ansible Vault (Secrets)
 **User Story**
 > **Als** Security Engineer,
 > **wil ik** secrets beheren via Ansible Vault,
@@ -163,11 +177,11 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 
 ---
 
-### US-09: Load Balancing (ALB + SSL)
+### US-10: Load Balancing Automation (ALB + SSL via IaC)
 **User Story**
 > **Als** Platform Engineer,
-> **wil ik** een Application Load Balancer met HTTPS,
-> **zodat** verkeer veilig verdeeld wordt en certificaten centraal beheerd zijn.
+> **wil ik** de Application Load Balancer en HTTPS-configuratie automatiseren,
+> **zodat** de setup reproduceerbaar is en certificaten centraal beheerd zijn.
 
 **Acceptatiecriteria**
 - [ ] **ALB:** Load balancer is actief en gekoppeld aan target groups.
@@ -177,14 +191,14 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 
 ---
 
-### US-10: Secure Identity Integration (Keycloak SSO)
+### US-11: Keycloak SSO (Manual Setup)
 **User Story**
 > **Als** Compliance Officer,
-> **wil ik** dat gebruikers inloggen via hun bestaande Microsoft account en niet via een losse gebruikersnaam/wachtwoord,
-> **zodat** we centraal toegangsbeheer hebben en voldoen aan het security beleid van de stad.
+> **wil ik** handmatig een Keycloak SSO-flow opzetten,
+> **zodat** gebruikers kunnen inloggen via hun Microsoft account zonder aparte credentials.
 
 **Context & Beschrijving**
-De applicatie ondersteunt authenticatie via headers. We moeten een Identity Provider (Keycloak) plaatsen die de login afhandelt (via OIDC met Microsoft/Google of een interne user database) en vervolgens het verkeer doorstuurt naar de backend met de juiste `AUTH_USER_HEADER`.
+De applicatie ondersteunt authenticatie via headers. We plaatsen handmatig een Identity Provider (Keycloak) die de login afhandelt (via OIDC met Microsoft/Google of een interne user database) en vervolgens het verkeer doorstuurt naar de backend met de juiste `AUTH_USER_HEADER`.
 
 **Acceptatiecriteria**
 - [ ] **Keycloak Setup:** Keycloak draait (mag in Docker op een aparte beheer-instance of via de cloud).
@@ -194,9 +208,23 @@ De applicatie ondersteunt authenticatie via headers. We moeten een Identity Prov
 
 ---
 
+### US-12: Keycloak SSO Automation (IaC/Ansible)
+**User Story**
+> **Als** Platform Engineer,
+> **wil ik** de Keycloak setup automatiseren,
+> **zodat** de configuratie reproduceerbaar is en niet afhankelijk is van manuele stappen.
+
+**Acceptatiecriteria**
+- [ ] **Provisioning:** Keycloak wordt via IaC/Ansible uitgerold.
+- [ ] **Config as Code:** Realm, clients en roles worden automatisch geconfigureerd.
+- [ ] **Secrets:** Client secrets worden veilig beheerd (vault/secret manager).
+- [ ] **Herhaalbaarheid:** Een nieuwe omgeving kan opgebouwd worden zonder handmatige UI-actie.
+
+---
+
 ## Topic: Scale & Observability
 
-### US-11: Elastic Compute Scaling (ASG)
+### US-13: Elastic Compute Scaling (ASG)
 **User Story**
 > **Als** Product Owner,
 > **wil ik** dat het systeem automatisch extra rekenkracht (Processor nodes) bijschakelt als er veel foto's worden geupload,
@@ -215,7 +243,7 @@ De Python image processing is CPU-intensief. Een server kan misschien 1 foto per
 
 ---
 
-### US-12: Full-Stack Observability (Datadog)
+### US-14: Full-Stack Observability (Datadog)
 **User Story**
 > **Als** DevOps Engineer,
 > **wil ik** dashboards met real-time metrics en logs van alle servers,
