@@ -1,6 +1,6 @@
 # Research Paper Richtlijnen
 
-Naast het infrastructuur- en automatisatieproject voeren studenten een onderzoekscomponent uit. Dit research paper sluit inhoudelijk aan op het PXLCensor project en focust op monitoring, observability en performance-analyse in cloud omgevingen.
+Naast het infrastructuur- en automatisatieproject voeren studenten een onderzoekscomponent uit. Dit research paper sluit inhoudelijk aan op het project en focust op monitoring, observability en performance-analyse in cloud omgevingen.
 
 Het doel is niet enkel theoretisch onderzoek, maar het implementeren van een Proof of Concept (PoC) die de onderzochte concepten valideert binnen de projectinfrastructuur.
 
@@ -26,7 +26,7 @@ Het researchgedeelte heeft drie hoofddoelen:
 - Theorie koppelen aan praktische cloud implementaties
 - Onderbouwde beslissingen leren nemen op basis van metrics en experimenten
 
-De primaire toolingcontext voor dit project is Datadog, in lijn met de observability-eisen uit het projectgedeelte.
+De observability tooling volgt de keuzes uit het projectgedeelte.
 
 ---
 
@@ -59,7 +59,7 @@ Formuleer minimaal:
 
 Richtlijnen:
 
-- Concreet: gekoppeld aan een reëel probleem binnen PXLCensor
+- Concreet: gekoppeld aan een reëel probleem binnen het project
 - Afgebakend: haalbaar binnen projectduur
 - Meetbaar: verifieerbaar via experimenten
 
@@ -91,7 +91,7 @@ Analyseer relevante bronnen:
 
 - Cloud monitoring best practices
 - Observability principes
-- Datadog documentatie
+- Documentatie van de gekozen observability tool
 - Whitepapers of academische publicaties
 
 Doel:
@@ -109,7 +109,7 @@ Bronnen moeten beoordeeld worden op relevantie en betrouwbaarheid volgens CRAAP-
 Beschrijf de praktische implementatie:
 
 - Architectuurkeuzes
-- Datadog agent configuratie
+- Agent configuratie van de gekozen observability tool
 - Metrics collection
 - Log ingestion
 - Dashboards
@@ -253,9 +253,9 @@ Vereisten:
 
 ## Relatie met Projectgedeelte
 
-De PoC uit het research paper moet geïntegreerd zijn in de PXLCensor infrastructuur:
+De PoC uit het research paper moet geïntegreerd zijn in de projectinfrastructuur:
 
-- Datadog dashboards moeten actief data tonen
+- Dashboards moeten actief data tonen
 - Alerts moeten triggerbaar zijn
 - Metrics moeten afkomstig zijn van echte workloads
 

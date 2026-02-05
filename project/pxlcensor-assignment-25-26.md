@@ -17,7 +17,7 @@ Als de Cloud Engineering Task Force moet je PXLCensor migreren naar een resilien
 Aangezien Docker verboden is op de production servers, moet je de "bare metal" deployment automatiseren.
 
 * **AWS Setup:** Architect het netwerk (VPC, Subnets, Security Groups) en de high-availability components (Load Balancer, Auto Scaling Groups) via de AWS Console.
-* **Ansible Orchestration:** Schrijf playbooks om cloud instances vanaf nul te provisionen - installeer Node.js, Python en PostgreSQL, en beheer de services via `systemd`.
+* **Ansible Orchestration:** Schrijf playbooks om cloud instances vanaf nul te provisionen - installeer Node.js en Python, en beheer de services via `systemd`.
 
 ### Scaling
 

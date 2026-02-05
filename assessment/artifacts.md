@@ -5,7 +5,7 @@
 In deze fase tonen de studenten aan dat de architectuur begrepen wordt en functioneert in een cloud-omgeving.
 
 * **Architecture Diagram:** Een gedetailleerd overzicht van de AWS VPC, inclusief subnets, route tables en de security groups voor de EC2 instances en RDS.
-* **Connectivity Report:** Logs of screenshots die bewijzen dat de bare-metal API succesvol verbinding maakt met de RDS instance en de containerized services.
+* **Connectivity Report:** Logs of screenshots die bewijzen dat de bare-metal API succesvol verbinding maakt met de RDS instance en de backend services.
 * **Service Proof:** Een screenshot van de werkende web-interface via een publiek IP-adres waarbij een foto succesvol is geanonimiseerd.
 * **Systemd Inventory:** Een lijst van de handmatig aangemaakte systemd unit files op de API en Frontend instances.
 

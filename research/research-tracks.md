@@ -29,7 +29,7 @@ Het voorstel moet:
 - Meetbaar zijn via metrics, logs of traces  
 - Praktisch implementeerbaar zijn binnen het project  
 - Een PoC bevatten  
-- Aansluiten bij **AWS** en de gekozen observability stack (**Datadog**)  
+- Aansluiten bij de gekozen cloud- en observability context  
 
 ---
 
@@ -109,7 +109,7 @@ Onderzoeken hoe observability tooling kan worden ingezet om autoscaling gedrag v
 
 #### Hoofdonderzoeksvraag
 
-Hoe kan observability tooling (zoals Datadog) worden gebruikt om autoscaling gedrag van processing workloads in AWS te optimaliseren?
+Hoe kan observability tooling worden gebruikt om autoscaling gedrag van processing workloads in de gekozen cloudomgeving te optimaliseren?
 
 ---
 
@@ -167,7 +167,7 @@ In welke mate verbetert full-stack observability (metrics, logs en traces) de de
 
 #### Verplichte PoC Componenten
 
-- Datadog APM tracing  
+- APM tracing  
 - Structured logging setup  
 - Dashboard configuratie  
 - Incident simulatie (bijv. resource saturation, service failure)  
@@ -183,7 +183,7 @@ In welke mate verbetert full-stack observability (metrics, logs en traces) de de
 
 ---
 
-### Track C - Monitoring Tool Comparison (Datadog vs CloudWatch)
+### Track C - Monitoring Tool Comparison (Tool A vs Tool B)
 
 #### Doel
 
@@ -193,7 +193,7 @@ Vergelijken van commerciële SaaS monitoring met native cloud tooling.
 
 #### Hoofdonderzoeksvraag
 
-Hoe verhoudt Datadog zich tot AWS CloudWatch voor monitoring van een schaalbare EC2-based applicatie?
+Hoe verhouden twee observability tools zich voor monitoring van een schaalbare cloudapplicatie (bijv. Datadog vs Prometheus + Grafana)?
 
 ---
 

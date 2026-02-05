@@ -7,7 +7,7 @@ Dit document beschrijft de beoordelingsstructuur van het PXLCensor project en he
 ## Globale Verdeling
 
 | Component | Gewicht |
------------|---------
+| --- | --- |
 | Project Werk | 65% |
 | Research Paper | 35% |
 
@@ -58,7 +58,7 @@ Beoordelingsaspecten:
 Verdeling binnen het paper:
 
 | Onderdeel | Gewicht |
------------|---------
+| --- | --- |
 | Methodology en Literature Study | 20% |
 | Implementation en Experimenten | 60% |
 | Conclusion | 10% |
