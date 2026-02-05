@@ -19,8 +19,7 @@
   * [Weekplanning](planning/week_planning.md)
 
 * PXL
-  * [Process](project/process.md)
-  * [PXL Regels en procedures](pxl/procedures.md)
+  * [Proces en procedures](project/process.md)
 
 * Reference
   * [Agile/Scrum info](reference/agile.md)

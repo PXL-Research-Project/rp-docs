@@ -1,25 +1,25 @@
-# Project Proces en afspraken
+# Projectproces en PXL-procedures
 
-Dit document beschrijft de werkstructuur, procesafspraken en tooling die gebruikt worden tijdens het PXLCensor project.
+Dit document bundelt de procesafspraken voor het project en de officiële PXL-procedures die gelden voor deelname en evaluatie.
+
+Bij conflicten tussen deze pagina en officiële communicatie via Blackboard of lectoren, heeft de officiële PXL-communicatie altijd voorrang.
 
 ---
 
-## Agile Werkwijze
+## Agile werkwijze
 
 Het project wordt uitgevoerd volgens Scrum principes.
 
-### Sprint Structuur
+### Sprint structuur
 
 - Sprint lengte: ~3 weken
-- Sprint Planning aan het begin van elke sprint
-- Sprint Review aan het einde
-- Sprint Retrospective na de review
+- Sprint planning aan het begin van elke sprint
+- Sprint review aan het einde
+- Sprint retrospective na de review
 
----
+### Scrum rollen
 
-### Scrum Rollen
-
-#### Product Owner
+#### Product owner
 
 Wordt gesimuleerd door de lector(en):
 
@@ -27,29 +27,29 @@ Wordt gesimuleerd door de lector(en):
 - Valideert acceptatiecriteria
 - Keurt opleveringen goed
 
-#### Scrum Master
+#### Scrum master
 
 - Roteert wekelijks binnen het team
 - Faciliteert meetings
 - Bewaakt proces en timing
 
-#### Development Team
+#### Development team
 
 - Gezamenlijk verantwoordelijk voor delivery
 - Zelforganisatie verwacht
 
 ---
 
-## Jira Workflow
+## Jira workflow
 
 Jira wordt gebruikt voor:
 
-- Product Backlog beheer
-- Sprint Backlogs
+- Product backlog beheer
+- Sprint backlogs
 - Story tracking
 - Progress monitoring
 
-### Story Richtlijnen
+### Story richtlijnen
 
 - Stories moeten sprintbaar zijn
 - Acceptance criteria verplicht
@@ -62,7 +62,7 @@ Jira wordt gebruikt voor:
 
 ---
 
-## Tempo Time Tracking
+## Tempo time tracking
 
 Tempo wordt gebruikt voor tijdsregistratie.
 
@@ -74,83 +74,169 @@ Regels:
 
 ---
 
-## Confluence Documentatie
+## Confluence documentatie
 
 Confluence fungeert als centrale documentatiehub.
 
-### Minimale Paginastructuur
+### Minimale paginastructuur
 
-- Project Overview
-- Scrum Logboek
-- Sprint Reviews
+- Project overview
+- Scrum logboek
+- Sprint reviews
 - Retrospectives
-- Architecture Documentation
-- Network Design
-- Deployment Procedures
-- Service Inventory
-- Port and Protocol Overview
+- Architecture documentation
+- Network design
+- Deployment procedures
+- Service inventory
+- Port and protocol overview
 
 ---
 
-## Communicatie
+## Communicatiekanalen
 
-Toegestane tools:
+Alle officiële projectcommunicatie verloopt via PXL-platformen.
 
-- Microsoft Teams
-- Outlook (PXL accounts)
+Toegestaan:
+
+- Microsoft Teams (PXL account)
+- PXL Outlook e-mail
 
 Niet toegestaan:
 
 - Discord
 - Privé Slack servers
+- Persoonlijke messaging apps
+
+Studenten zijn verantwoordelijk voor het dagelijks opvolgen van hun PXL-mail en Teams-berichten.
 
 ---
 
-## Verplichte Aanwezigheid
+## Gebruik van accounts en tools
 
 Verplicht:
 
-- Sprint meetings
-- Reviews
+- Gebruik van PXL Microsoft accounts
+- Gebruik van toegewezen AWS-accounts of credits
+- Gebruik van opgelegde tooling (Jira, Confluence, Tempo)
+
+Persoonlijke cloudaccounts mogen enkel gebruikt worden indien expliciet toegestaan door de lector.
+
+---
+
+## Verplichte deelname
+
+Aanwezigheid is verplicht bij:
+
+- Sprint plannings
+- Sprint reviews
 - Retrospectives
-- Team overleggen
+- Teammeetings met lectoren
 - Eindpresentatie
 
-Afwezigheden moeten vooraf gemeld worden.
+Afwezigheden moeten vooraf gemeld worden en zijn enkel geldig met geldige reden.
 
 ---
 
 ## Plagiaatbeleid
 
-Zero tolerance:
+PXL hanteert een zero tolerance beleid voor plagiaat.
 
-- Geen code sharing tussen teams
-- Geen hergebruik van vorige jaargangen
-- Externe bronnen correct citeren
+Verboden:
 
-Overtredingen worden behandeld als examenfraude.
+- Code delen tussen teams
+- Hergebruik van vorige jaargangen
+- Overnemen van externe oplossingen zonder bronvermelding
+- Kopiëren van publieke repositories zonder duidelijke referentie
+
+Overtredingen worden behandeld als examenfraude en kunnen leiden tot:
+
+- Ongeldige beoordeling
+- Sancties volgens examenreglement
+- Rapportering aan de examencommissie
 
 ---
 
-## Individuele Verantwoordelijkheid
+## Individuele verantwoordelijkheid
 
 Elke student is verantwoordelijk voor:
 
-- Eigen hardware
-- Eigen planning
-- Actieve participatie
-- Dagelijkse communicatie opvolging
+- Werkende persoonlijke hardware
+- Internettoegang
+- Back-ups van eigen werk
+- Tijdige opleveringen
+- Correcte tijdsregistratie
 
-Problemen moeten onmiddellijk gemeld worden aan het team en lector.
+Technische problemen met eigen apparatuur gelden niet automatisch als geldige deadline-excuse.
 
 ---
 
-## Documentatie Discipline
+## Blackboard inleveringen
 
-Alle technische beslissingen moeten:
+Officiële opleveringen gebeuren via Blackboard.
 
-- Gedocumenteerd zijn
-- Reproduceerbaar zijn
-- Version controlled zijn waar mogelijk
+Typische inlevermomenten:
 
-Niet-gedocumenteerde configuraties worden beschouwd als niet bestaand.
+- Research question submission
+- Project abstract
+- Draft paper
+- Final research paper
+
+Exacte deadlines worden per academiejaar gecommuniceerd via Blackboard.
+
+De GitHub repository fungeert als werkplatform, maar Blackboard blijft het officiële evaluatiekanaal.
+
+---
+
+## Evaluatieprocedure
+
+De eindbeoordeling kan bestaan uit:
+
+- Groepsscore voor projectwerk
+- Individuele score via peer evaluation
+- Research paper beoordeling
+- Mondelinge verdediging of demo
+
+De lector behoudt het recht om:
+
+- Individuele scores te corrigeren bij ongelijke inzet
+- Extra toelichting te vragen
+- Technische validatie te eisen tijdens evaluatiemomenten
+
+---
+
+## Peer evaluation
+
+Peer assessments worden gebruikt om individuele bijdragen te evalueren.
+
+Factoren die meewegen:
+
+- Inzet
+- Technische bijdrage
+- Betrouwbaarheid
+- Communicatie
+- Samenwerking
+
+Misbruik van peer evaluation (afspraken, manipulatie) kan leiden tot ongeldigverklaring.
+
+---
+
+## Wijzigingen tijdens het academiejaar
+
+De projectcontext kan tijdens het academiejaar worden bijgestuurd.
+
+Mogelijke aanpassingen:
+
+- Tooling updates
+- Scope-aanpassingen
+- Extra security requirements
+- Infrastructure limits
+
+Wijzigingen worden steeds gecommuniceerd via officiële PXL-kanalen.
+
+---
+
+## Juridische referentie
+
+Voor alle formele regels die niet expliciet in deze documentatie staan, geldt:
+
+Het officiële PXL examenreglement is altijd leidend.
