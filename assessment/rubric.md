@@ -77,6 +77,8 @@ Scoreer op:
 - Meetbare criteria zijn aantoonbaar (logs, screenshots, outputs).
 - Bewijs is traceerbaar (link/locatie in repo of documentatie).
 - Afwijkingen t.o.v. criteria zijn expliciet benoemd.
+- Artifacts en documentatie zijn up-to-date en bruikbaar voor derden.
+- Research-progress en PoC-artefacten zijn zichtbaar wanneer het researchcomponent actief is.
 
 **Ankers per score (voorbeeld):**
 - 4: Alle criteria expliciet afgevinkt met bewijs en locatie.
@@ -97,6 +99,7 @@ Scoreer op:
 - Betrouwbaarheid: services starten en herstellen correct.
 - Basisperformance is acceptabel (geen evidente bottlenecks).
 - Architectuur en configuratie zijn consistent met technische keuzes.
+- Technische constraints en projectregels worden gerespecteerd.
 
 **Ankers per score (voorbeeld):**
 - 4: Reproduceerbaar, geautomatiseerd, robuust, met duidelijke bewijsvoering.
@@ -116,6 +119,7 @@ Scoreer op:
 - Logs zijn bruikbaar en correleerbaar met systeemgedrag.
 - Incident of load test is aantoonbaar gemonitord.
 - Acties zijn onderbouwd met data (geen pure aannames).
+- Basis SLA/SLO of performance targets worden gerapporteerd wanneer van toepassing.
 
 **Ankers per score (voorbeeld):**
 - 4: Telemetry volledig, correlaties aantoonbaar, duidelijke conclusies.
