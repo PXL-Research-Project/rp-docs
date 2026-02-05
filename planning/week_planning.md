@@ -13,7 +13,9 @@
 
 ## Sprint 1 - Artifact Deadline
 
-**Zondag 08/03/2026 - 21:59**
+**Zondag 08/03/2026 - 21:59 (dd/mm/yyyy)**
+
+Legenda: `SR0` = Sprint Review 0, `VO` = Validatie Onderzoek, `SR1/2/3` = Sprint Review.
 
 ### Te uploaden (Sprint Review 1)
 
@@ -37,7 +39,7 @@ Documentatie:
 
 ## Sprint 2 - Artifact Deadline
 
-**Zondag 29/03/2026 - 21:59**
+**Zondag 29/03/2026 - 21:59 (dd/mm/yyyy)**
 
 ### Te uploaden (Sprint Review 2)
 
@@ -61,7 +63,7 @@ Documentatie:
 
 ## Sprint 3 - Artifact Deadline
 
-**Zondag 10/05/2026 - 21:59**
+**Zondag 10/05/2026 - 21:59 (dd/mm/yyyy)**
 
 ### Te uploaden (Sprint Review 3 - Final Demo)
 

@@ -1,6 +1,6 @@
 # Evaluatie en Beoordeling
 
-Dit document beschrijft de beoordelingsstructuur van het PXLCensor project en het research paper.
+Dit document beschrijft de beoordelingsstructuur van het project en het research paper.
 
 ---
 

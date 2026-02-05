@@ -6,7 +6,12 @@ Dit document bevat de user stories als een gewone backlog. De items zijn georden
 
 ## Topic: Foundation & Access
 
-### US-01: Secure Network Architecture (VPC Design)
+Kritieke afhankelijkheden:
+- US-01 is nodig voor US-02 en US-03.
+- US-02 is nodig voor US-03.
+- US-04 en US-05 zijn nodig voor een volledige end-to-end demo.
+
+### US-01: Secure Network Architecture (VPC Design) [High]
 **User Story**
 > **Als** Security Architect,
 > **wil ik** een geisoleerde Virtual Private Cloud (VPC) met strikte netwerksegmentatie,
@@ -26,7 +31,7 @@ We kunnen de 'Default VPC' van AWS niet gebruiken omdat deze niet voldoet aan de
 
 ---
 
-### US-02: Managed Database Deployment (RDS)
+### US-02: Managed Database Deployment (RDS) [High]
 **User Story**
 > **Als** Applicatie Beheerder,
 > **wil ik** een beheerde PostgreSQL database die alleen toegankelijk is vanuit ons eigen netwerk,
@@ -43,7 +48,7 @@ De PXLCensor applicatie heeft een PostgreSQL database nodig. In plaats van zelf 
 
 ---
 
-### US-03: Bare-Metal Application Deployment (EC2)
+### US-03: Bare-Metal Application Deployment (EC2) [High]
 **User Story**
 > **Als** Release Engineer,
 > **wil ik** de Node.js API en Python Processor handmatig werkend krijgen op Linux servers,
@@ -65,7 +70,7 @@ Voordat we Ansible scripts kunnen schrijven, moeten we weten wat de applicatie n
 
 ---
 
-### US-04: Frontend Hosting (Nginx Manual)
+### US-04: Frontend Hosting (Nginx Manual) [Medium]
 **User Story**
 > **Als** Frontend Engineer,
 > **wil ik** de frontend handmatig hosten op een webserver,
@@ -79,14 +84,14 @@ Voordat we Ansible scripts kunnen schrijven, moeten we weten wat de applicatie n
 
 ---
 
-### TECH-01: Git Repository Setup & Access
+### TECH-01: Git Repository Setup & Access [High]
 **Doel**
 - [ ] Repository aangemaakt en team heeft toegang.
 - [ ] Branch protection of basisworkflow is afgesproken.
 
 ---
 
-### US-05: Load Balancer (Manual ALB + SSL)
+### US-05: Load Balancer (Manual ALB + SSL) [High]
 **User Story**
 > **Als** Platform Engineer,
 > **wil ik** handmatig een Application Load Balancer met HTTPS configureren,
@@ -102,7 +107,11 @@ Voordat we Ansible scripts kunnen schrijven, moeten we weten wat de applicatie n
 
 ## Topic: Automation & Ops
 
-### US-06: Ansible Inventory & Base Configuration
+Kritieke afhankelijkheden:
+- US-06 is nodig voor US-07 en US-08.
+- US-07/US-08 zijn nodig voor US-10 en US-12.
+
+### US-06: Ansible Inventory & Base Configuration [High]
 **User Story**
 > **Als** System Administrator,
 > **wil ik** een geautomatiseerde basisconfiguratie uitrollen over al mijn servers,
@@ -122,7 +131,7 @@ We stappen over van "inloggen en typen" naar "push configuration". De eerste sta
 
 ---
 
-### US-07: Service Management Automation (Systemd)
+### US-07: Service Management Automation (Systemd) [High]
 **User Story**
 > **Als** Site Reliability Engineer (SRE),
 > **wil ik** dat de applicatie-services worden beheerd door het OS-init systeem (systemd),
@@ -142,7 +151,7 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 
 ---
 
-### US-08: App Deployment Playbooks
+### US-08: App Deployment Playbooks [High]
 **User Story**
 > **Als** Release Engineer,
 > **wil ik** een geautomatiseerde deployment van de applicaties via Ansible,
@@ -155,7 +164,7 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 
 ---
 
-### US-09: Ansible Vault (Secrets)
+### US-09: Ansible Vault (Secrets) [Medium]
 **User Story**
 > **Als** Security Engineer,
 > **wil ik** secrets beheren via Ansible Vault,
@@ -170,14 +179,18 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 
 ## Topic: Platform & Security
 
-### TECH-02: Domain Name & DNS (Route53)
+Kritieke afhankelijkheden:
+- TECH-02 is nodig voor US-05 en US-10 (domein/HTTPS).
+- US-11 is nodig voor US-12 (automation).
+
+### TECH-02: Domain Name & DNS (Route53) [Medium]
 **Doel**
 - [ ] Domeinnaam is geregistreerd of toegewezen.
 - [ ] DNS-records verwijzen naar de juiste public endpoint(s).
 
 ---
 
-### US-10: Load Balancing Automation (ALB + SSL via Ansible)
+### US-10: Load Balancing Automation (ALB + SSL via Ansible) [High]
 **User Story**
 > **Als** Platform Engineer,
 > **wil ik** de Application Load Balancer en HTTPS-configuratie automatiseren,
@@ -191,7 +204,7 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 
 ---
 
-### US-11: Keycloak SSO (Manual Setup)
+### US-11: Keycloak SSO (Manual Setup) [High]
 **User Story**
 > **Als** Compliance Officer,
 > **wil ik** handmatig een Keycloak SSO-flow opzetten,
@@ -208,7 +221,7 @@ De applicatie ondersteunt authenticatie via headers. We plaatsen handmatig een I
 
 ---
 
-### US-12: Keycloak SSO Automation (Ansible)
+### US-12: Keycloak SSO Automation (Ansible) [Medium]
 **User Story**
 > **Als** Platform Engineer,
 > **wil ik** de Keycloak setup automatiseren,
@@ -224,7 +237,11 @@ De applicatie ondersteunt authenticatie via headers. We plaatsen handmatig een I
 
 ## Topic: Scale & Observability
 
-### US-13: Elastic Compute Scaling (ASG)
+Kritieke afhankelijkheden:
+- US-13 is nodig voor load tests en scaling-evidence.
+- US-14 bouwt voort op US-06/US-07 (agent deployment en telemetry).
+
+### US-13: Elastic Compute Scaling (ASG) [High]
 **User Story**
 > **Als** Product Owner,
 > **wil ik** dat het systeem automatisch extra rekenkracht (Processor nodes) bijschakelt als er veel foto's worden geupload,
@@ -243,7 +260,7 @@ De Python image processing is CPU-intensief. Een server kan misschien 1 foto per
 
 ---
 
-### US-14: Full-Stack Observability (Datadog)
+### US-14: Full-Stack Observability (Datadog) [High]
 **User Story**
 > **Als** DevOps Engineer,
 > **wil ik** dashboards met real-time metrics en logs van alle servers,
@@ -262,7 +279,10 @@ In een schalende omgeving (ASG) leven servers soms maar kort. Logs die op de sch
 
 ## Topic: Release & Validation
 
-### TECH-03: Final Load Test & Demo Prep
+Kritieke afhankelijkheden:
+- TECH-03 vereist US-10/US-13/US-14 voor volledige validatie.
+
+### TECH-03: Final Load Test & Demo Prep [High]
 **Doel**
 - [ ] Load test uitgevoerd met documentatie van resultaten.
 - [ ] Demo scenario is voorbereid en reproduceerbaar.

@@ -1,6 +1,6 @@
-# Sprint Review Template: Operation UrbanShield
+# Sprint Review Template
 
-**Project:** Operation UrbanShield - Smart City Privacy
+**Project:** [Projectnaam / Jaargang]
 
 **Groep:** [Naam]
 
@@ -10,7 +10,7 @@
 
 ## Sprint Goal
 
-Wat was het hoofddoel van deze sprint en welke specifieke onderdelen van de PXLCensor stack stonden centraal?
+Wat was het hoofddoel van deze sprint en welke specifieke onderdelen stonden centraal?
 
 ---
 
@@ -18,8 +18,8 @@ Wat was het hoofddoel van deze sprint en welke specifieke onderdelen van de PXLC
 
 Geen losse features, maar een proces-gebaseerde demonstratie voor de Product Owner.
 
-* **Scenario:** [Bijv. "Een ambtenaar van de verkeersdienst logt in via Microsoft en uploadt 10 foto's van een verkeerskruispunt tijdens spitsuur."]
-* **Wat laten we zien:** [Bijv. Login flow, Processing status in de UI, Anoniem resultaat, Scaling events in de AWS console.]
+* **Scenario:** [Bijv. "Een gebruiker logt in en doorloopt de volledige flow"]
+* **Wat laten we zien:** [Bijv. Login flow, verwerking, status updates, scaling events]
 
 ---
 
@@ -29,22 +29,22 @@ Presentatie van de bewijslast die de kwaliteit van het werk onderbouwt.
 
 | Artifact | Beschrijving & Locatie (Link/Repo) | Status |
 | --- | --- | --- |
-| **Architecture Diagram** | Visuele weergave van de huidige Cloud infra. | [Voltooid/In progress] |
-| **Ansible Playbooks** | Bewijs van geautomatiseerde deployment en idempotency. | [Link naar Git] |
-| **Datadog Dashboards** | Live view van systeemgezondheid en metrics. | [Screenshot/Link] |
-| **Load Test Reports** | Resultaten van de stresstest en ASG reactie. | [PDF/Log] |
-| **Security Audit** | Bewijs van HTTPS, Keycloak integratie en Header-auth. | [Testrapport] |
+| **Architecture Diagram** | Visuele weergave van de huidige cloud-infra. | [Voltooid/In progress] |
+| **Automation Evidence** | Bewijs van geautomatiseerde deployment en idempotency. | [Link naar Git] |
+| **Monitoring Dashboards** | Live view van systeemgezondheid en metrics. | [Screenshot/Link] |
+| **Load Test Reports** | Resultaten van de stresstest en scaling reactie. | [PDF/Log] |
+| **Security Audit** | Bewijs van HTTPS, identity-integratie en header-auth. | [Testrapport] |
 
 ---
 
 ## SLA & Performance Status
 
-Hoe presteert het systeem ten opzichte van de eisen van de Stad Berlijn?
+Hoe presteert het systeem ten opzichte van de afgesproken eisen?
 
 * **Availability:** Hoeveel downtime is er geweest tijdens de deployment?
-* **Latency:** Wat is de gemiddelde verwerkingstijd van een standaard afbeelding?
-* **Scaling:** Hoe snel werd een nieuwe worker gespind tijdens de load test?
-* **Poison Pill Resilience:** Hoe reageerde het systeem op het corrupte 4K testbestand?
+* **Latency:** Wat is de gemiddelde verwerkingstijd van een standaard request?
+* **Scaling:** Hoe snel werd extra capaciteit toegevoegd bij load?
+* **Resilience:** Hoe reageerde het systeem op fouten of corrupte input?
 
 ---
 
