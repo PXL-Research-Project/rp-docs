@@ -29,7 +29,7 @@ Het voorstel moet:
 - Meetbaar zijn via metrics, logs of traces  
 - Praktisch implementeerbaar zijn binnen het project  
 - Een PoC bevatten  
-- Aansluiten bij AWS + observability context  
+- Aansluiten bij **AWS** en de gekozen observability stack (**Datadog**)  
 
 ---
 

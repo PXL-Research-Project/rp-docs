@@ -38,7 +38,7 @@ De stad vereist een gecentraliseerde **Login Portal** voor verschillende afdelin
 
 De stad moet precies weten hoe het systeem zich gedraagt onder druk.
 
-* **Monitoring Stack:** Track en analyseer key metrics (bijv. met Prometheus en Grafana).
+* **Monitoring Stack:** Track en analyseer key metrics met **Datadog**.
 * **Load Testing:** Je moet bewijzen dat het systeem een "Rush Hour" spike aankan. Je bent verplicht om load tests uit te voeren om je **auto scaling** policies te triggeren en te valideren.
 
 ---
@@ -55,8 +55,9 @@ Je werkt als een Agile Squad in Sprints.
 
 | Component | Requirement |
 | --- | --- |
-| **Cloud** | TBD |
+| **Cloud** | **AWS** |
 | **Automation** | **Ansible** (Strikt geen Docker op cloud instances) |
-| **Identity** | SSO Portal met Microsoft OIDC/SAML integration |
+| **IaC tools** | **Terraform/CloudFormation niet toegestaan** |
+| **Identity** | **Keycloak** met Microsoft OIDC |
 | **Database** | Managed PostgreSQL (RDS) |
-| **Observability** | TBD |
+| **Observability** | **Datadog** |

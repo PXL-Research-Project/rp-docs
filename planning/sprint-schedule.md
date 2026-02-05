@@ -37,7 +37,7 @@ Dit document bevat de planning, inschattingen en verdeling van de User Stories o
 
 ---
 
-## Sprint 2: Infrastructure as Code (Ansible)
+## Sprint 2: Automation (Ansible)
 *Focus: Automatisering, Idempotency en Secret Management.*
 
 | ID | Title | Priority | Story Points | Assignee | Status |
@@ -59,9 +59,9 @@ Dit document bevat de planning, inschattingen en verdeling van de User Stories o
 | ID | Title | Priority | Story Points | Assignee | Status |
 |----|-------|----------|--------------|----------|--------|
 | **US-13** | **Elastic Compute Scaling (ASG)** | High | 8 | | To Do |
-| **US-12** | **Keycloak SSO Automation (IaC/Ansible)** | Medium | 5 | | To Do |
+| **US-12** | **Keycloak SSO Automation (Ansible)** | Medium | 5 | | To Do |
 | **US-14** | **Full-Stack Observability (Datadog)** | Medium | 5 | | To Do |
-| **US-10** | Load Balancing Automation (ALB + SSL via IaC) | High | 5 | | To Do |
+| **US-10** | Load Balancing Automation (ALB + SSL via Ansible) | High | 5 | | To Do |
 | **TECH-03** | Final Load Test & Demo Prep | High | 3 | | To Do |
 
 **Sprint Doel:** Een zelf-helend, veilig en inzichtelijk systeem dat klaar is voor de "Rush Hour" demo.

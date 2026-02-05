@@ -177,7 +177,7 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 
 ---
 
-### US-10: Load Balancing Automation (ALB + SSL via IaC)
+### US-10: Load Balancing Automation (ALB + SSL via Ansible)
 **User Story**
 > **Als** Platform Engineer,
 > **wil ik** de Application Load Balancer en HTTPS-configuratie automatiseren,
@@ -198,7 +198,7 @@ Een professionele Linux applicatie draait niet in een `screen` sessie of via `no
 > **zodat** gebruikers kunnen inloggen via hun Microsoft account zonder aparte credentials.
 
 **Context & Beschrijving**
-De applicatie ondersteunt authenticatie via headers. We plaatsen handmatig een Identity Provider (Keycloak) die de login afhandelt (via OIDC met Microsoft/Google of een interne user database) en vervolgens het verkeer doorstuurt naar de backend met de juiste `AUTH_USER_HEADER`.
+De applicatie ondersteunt authenticatie via headers. We plaatsen handmatig een Identity Provider (Keycloak) die de login afhandelt via Microsoft OIDC en vervolgens het verkeer doorstuurt naar de backend met de juiste `AUTH_USER_HEADER`.
 
 **Acceptatiecriteria**
 - [ ] **Keycloak Setup:** Keycloak draait (mag in Docker op een aparte beheer-instance of via de cloud).
@@ -208,14 +208,14 @@ De applicatie ondersteunt authenticatie via headers. We plaatsen handmatig een I
 
 ---
 
-### US-12: Keycloak SSO Automation (IaC/Ansible)
+### US-12: Keycloak SSO Automation (Ansible)
 **User Story**
 > **Als** Platform Engineer,
 > **wil ik** de Keycloak setup automatiseren,
 > **zodat** de configuratie reproduceerbaar is en niet afhankelijk is van manuele stappen.
 
 **Acceptatiecriteria**
-- [ ] **Provisioning:** Keycloak wordt via IaC/Ansible uitgerold.
+- [ ] **Provisioning:** Keycloak wordt via Ansible uitgerold.
 - [ ] **Config as Code:** Realm, clients en roles worden automatisch geconfigureerd.
 - [ ] **Secrets:** Client secrets worden veilig beheerd (vault/secret manager).
 - [ ] **Herhaalbaarheid:** Een nieuwe omgeving kan opgebouwd worden zonder handmatige UI-actie.
@@ -253,7 +253,7 @@ De Python image processing is CPU-intensief. Een server kan misschien 1 foto per
 In een schalende omgeving (ASG) leven servers soms maar kort. Logs die op de schijf staan, ben je kwijt als de server stopt. We moeten logs en metrics streamen naar een extern platform: Datadog.
 
 **Acceptatiecriteria**
-- [ ] **Datadog Agent:** Ansible role installeert de Datadog agent op elke node.
+- [ ] **Datadog Agent:** Ansible playbook installeert de Datadog agent op elke node.
 - [ ] **System Metrics:** Dashboard toont CPU, RAM, Disk I/O van alle actieve nodes.
 - [ ] **Log Aggregation:** De applicatie-logs (JSON format) worden door de agent opgepikt en zijn doorzoekbaar in Datadog Log Explorer.
 - [ ] **Process Monitoring:** Het dashboard toont of de `node` en `python` processen 'Up' zijn.

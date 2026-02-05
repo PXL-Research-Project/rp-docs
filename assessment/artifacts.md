@@ -13,7 +13,7 @@ In deze fase tonen de studenten aan dat de architectuur begrepen wordt en functi
 
 Hier verschuift de bewijslast naar de repository en reproduceerbaarheid.
 
-* **Git Repository:** De volledige source code van de Ansible playbooks en roles.
+* **Git Repository:** De volledige source code van de Ansible playbooks.
 * **Provisioning Logs:** Terminal output van een succesvolle `ansible-playbook` run waarbij alle tasks de status "ok" of "changed" hebben op een schone instance.
 * **Idempotency Check:** Bewijs dat een tweede run van het playbook resulteert in nul wijzigingen ("changed=0").
 * **Inventory File:** Een correct geconfigureerd Ansible inventory bestand waarin de verschillende host groups (api, workers, db) zijn gedefinieerd.
